@@ -14,7 +14,7 @@ I'm currently a MSc student in [University of New South Wales](https://www.unsw.
 
 ## News
 
-- **[Feb. 2024]** I wrote an article about some basic concepts in SVF and Static Pointer Analysis: [\[Article\]](https://zhuanlan.zhihu.com/p/681560790)![image](https://github.com/Billxzliu/Billxzliu.github.io/assets/160016200/cafdb427-3b5b-449f-ac7c-8cc6f1ac6d36)
+- **[Feb. 2024]** I wrote an article about some basic concepts in SVF and Static Pointer Analysis: [\[Article\]](https://zhuanlan.zhihu.com/p/681560790)
 
 
 - **[Apr. 2023]** Our paper about Machine Vision and Robotics is accepted to JCRAI 2023.
