@@ -7,6 +7,6 @@ main:
     pdf: https://doi.org/10.1145/3632971.3632986
     #code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     #page: https://class-il.mpi-inf.mpg.de/mnemonics/
-    Video: https://www.youtube.com/shorts/uqWzm9F6Tpc
+    video: https://www.youtube.com/shorts/uqWzm9F6Tpc
     notes: Oral Presentation
     image: ./assets/img/teaser_example.png
