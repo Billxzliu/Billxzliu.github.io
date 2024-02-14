@@ -10,7 +10,7 @@ I'm currently a MSc student in [University of New South Wales](https://www.unsw.
 
 - **Computer Vision:** 3D Reconstruction, Instance Segmentation, Object Detection
 - **Static Analysis:** Pointer Analysis, [SVF tools](https://svf-tools.github.io/SVF/)
-)
+
 
 ## News
 
