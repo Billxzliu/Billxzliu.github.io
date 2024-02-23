@@ -9,7 +9,7 @@ I'm currently a MSc student in [University of New South Wales](https://www.unsw.
 ## Research Interests
 
 - **Computer Vision:** 3D Reconstruction, Instance Segmentation, Object Detection, Robotics
-- **Static Analysis:** Pointer Analysis, [SVF tools](https://svf-tools.github.io/SVF/)
+- **Graph Database:** [SVF tools](https://svf-tools.github.io/SVF/) with Neo4j
 
 
 ## News
