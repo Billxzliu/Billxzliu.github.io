@@ -19,14 +19,14 @@ I'm currently a MSc student in [University of New South Wales (UNSW)](https://ww
 
 ## Research Experiences
 
-<h4 style="margin:0 10px 0;">[The Data and Knowledge Research Group](https://unswdb.github.io/), UNSW</h4>
+<h4 style="margin:0 10px 0;">The Data and Knowledge Research Group, UNSW</h4>
 <ul style="margin:0 0 5px;">
-  <autocolor><strong>[Dec.2023 ~ Current]</strong>Student Volunteer, under the supervision of Dr. [Zhengyi Yang](http://www.zhengyi.one/).</autocolor>
+  <autocolor><strong>[Dec.2023 ~ Current]</strong>Student Volunteer, under the supervision of Dr. Zhengyi Yang.</autocolor>
 </ul>
 
-<h4 style="margin:0 10px 0;">[Laboratory for Intelligent Design and Machine Vision](https://english.siat.ac.cn/SI2017/IAIT2017/RC1/CPE_20529/), SIAT</h4>
+<h4 style="margin:0 10px 0;">Laboratory for Intelligent Design and Machine Vision, SIAT</h4>
 <ul style="margin:0 0 5px;">
-  <autocolor><strong>[June.2022 ~ April.2023]</strong>Visiting Student, under the supervision of [Prof. Zhan Song](http://sourcedb.siat.cas.cn/yw/zjrc/201103/t20110302_3078034.html).</autocolor>
+  <autocolor><strong>[June.2022 ~ April.2023]</strong>Visiting Student, under the supervision of Prof. Zhan Song.</autocolor>
 </ul>
 
 {% include_relative _includes/publications.md %}
