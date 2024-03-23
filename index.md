@@ -11,14 +11,14 @@ I'm currently a MSc student in [University of New South Wales (UNSW)](https://ww
 <h4 style="margin:0 10px 0;">The Data and Knowledge Research Group, UNSW</h4>
 <ul style="margin:0 0 5px;">
   <autocolor><strong>[Dec.2023 ~ Current] </strong>Student Volunteer, under the supervision of Dr. Zhengyi Yang.</autocolor>
+  <autocolor>Research Topic: Extension of the static analysis framework SVF to graph databases.</autocolor>
 </ul>  
-  Research Topic: Extension of the static analysis framework SVF to graph databases.  
-
+  
 <h4 style="margin:0 10px 0;">Laboratory for Intelligent Design and Machine Vision, SIAT</h4>
 <ul style="margin:0 0 5px;">
   <autocolor><strong>[June.2022 ~ April.2023] </strong>Visiting Student, under the supervision of Prof. Zhan Song.</autocolor>
+  <autocolor> Research Topic: Vision Algorithms for Industrial Production.</autocolor>
 </ul>  
-  Research Topic: Vision Algorithms for Industrial Production.  
 
 ## Research Interests
 
