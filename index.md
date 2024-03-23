@@ -10,7 +10,7 @@ I'm currently a MSc student in [University of New South Wales (UNSW)](https://ww
 
 <h4 style="margin:0 10px 0;">The Data and Knowledge Research Group, UNSW</h4>
 <ul style="margin:0 0 5px;">
-  <autocolor><strong>[Dec.2023 ~ Current] </strong>Student Volunteer, under the supervision of Dr. Zhengyi Yang.</autocolor>
+  <autocolor><strong>[Dec.2023 ~ Current] </strong>Student Volunteer, under the supervision of Dr. Zhengyi Yang.<br></autocolor>
   <autocolor>Research Topic: Extension of the static analysis framework SVF to graph databases.</autocolor>
 </ul>  
   
