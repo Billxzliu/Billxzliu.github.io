@@ -18,6 +18,7 @@ Research Topic: Extension of the static analysis framework SVF to graph database
 <ul style="margin:0 0 5px;">
   <autocolor><strong>[June.2022 ~ April.2023] </strong>Visiting Student, under the supervision of Prof. Zhan Song.</autocolor>
 </ul>  
+Research Topic: Vision Algorithms for Industrial Production.  
 
 ## Research Interests
 
