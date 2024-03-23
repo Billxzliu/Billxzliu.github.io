@@ -8,8 +8,8 @@ I'm currently a MSc student in [University of New South Wales](https://www.unsw.
 
 ## Research Interests
 
-- **Computer Vision:** 3D Reconstruction, Instance Segmentation, Object Detection, Robotics
-- **Graph Database:** [SVF tools](https://svf-tools.github.io/SVF/) with Neo4j
+- **Computer Vision:** 3D Reconstruction, Instance Segmentation, Object Detection, Robotics.
+- **Graph Database:** [SVF tools](https://svf-tools.github.io/SVF/) with Graph Database.
 
 
 ## News
