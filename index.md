@@ -11,16 +11,19 @@ I'm currently a MSc student in [University of New South Wales (UNSW)](https://ww
 <h4 style="margin:0 10px 0;">The Data and Knowledge Research Group, UNSW</h4>
 <ul style="margin:0 0 5px;">
   <autocolor>Tenure:  Dec.2023 ~ Current<br></autocolor>
-  <autocolor>Position:  Student Volunteer, under the supervision of Dr. Zhengyi Yang.<br></autocolor>
-  <autocolor>Research Topic:  <strong>Extension of the Static Analysis framework to graph databases.</strong><br></autocolor>
+  <autocolor>Position:  Student Volunteer<br></autocolor>
+  <autocolor>Supervisor:  Dr. Zhengyi Yang<br></autocolor>
+  <autocolor>Research Topic:  <strong><span style="color: red;">Extension of the Static Analysis framework to graph databases.</span></strong><br></autocolor>
 </ul>  
   
 <h4 style="margin:0 10px 0;">Laboratory for Intelligent Design and Machine Vision, SIAT</h4>
 <ul style="margin:0 0 5px;">
   <autocolor>Tenure:  June.2022 ~ April.2023<br></autocolor>
-  <autocolor>Position:  Visiting Student, under the supervision of Prof. Zhan Song.<br></autocolor>
-  <autocolor>Research Topic:  <strong>Vision Algorithms for Industrial Production.</strong><br></autocolor>
-</ul><br>
+  <autocolor>Position:  Visiting Student<br></autocolor>
+  <autocolor>Supervisor:  Prof. Zhan Song<br></autocolor>
+  <autocolor>Research Topic:  <strong><span style="color: red;">Vision Algorithms for Industrial Production.</span></strong><br></autocolor>
+</ul>
+For more details about my research topic, you can visit my <a href="https://github.com/Billxzliu/Billxzliu.github.io/raw/main/documents/Xuanzhi_Liu_CV.pdf">CV.</a>
 
 ## Research Interests
 - **Static Analysis**
