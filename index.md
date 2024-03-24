@@ -13,7 +13,7 @@ I'm currently a MSc student in [University of New South Wales (UNSW)](https://ww
   <autocolor>Tenure:  Dec.2023 ~ Current<br></autocolor>
   <autocolor>Position:  Student Volunteer<br></autocolor>
   <autocolor>Supervisor:  Dr. Zhengyi Yang<br></autocolor>
-  <autocolor>Research Topic:  <strong><span style="color: red;">Extension of the Static Analysis framework to graph databases.</span></strong><br></autocolor>
+  <autocolor>Research Topic:  <strong><span style="color: red;">Extension of the Static Analysis framework to graph databases.</span></strong><br><br></autocolor>
 </ul>  
   
 <h4 style="margin:0 10px 0;">Laboratory for Intelligent Design and Machine Vision, SIAT</h4>
