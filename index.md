@@ -10,16 +10,16 @@ I'm currently a MSc student in [University of New South Wales (UNSW)](https://ww
 
 <h4 style="margin:0 10px 0;">The Data and Knowledge Research Group, UNSW</h4>
 <ul style="margin:0 0 5px;">
-  <autocolor>Tenure:  Dec.2023 ~ Current<br></autocolor>
-  <autocolor>Position:  Student Volunteer<br></autocolor>
+  <autocolor>Dec.2023 ~ Current<br></autocolor>
+  <autocolor><strong>Student Volunteer</strong><br></autocolor>
   <autocolor>Supervisor:  Dr. Zhengyi Yang<br></autocolor>
   <autocolor>Research Topic:  Extension of the Static Analysis framework to graph databases.<br><br></autocolor>
 </ul>  
   
 <h4 style="margin:0 10px 0;">Laboratory for Intelligent Design and Machine Vision, SIAT</h4>
 <ul style="margin:0 0 5px;">
-  <autocolor>Tenure:  June.2022 ~ April.2023<br></autocolor>
-  <autocolor>Position:  Visiting Student<br></autocolor>
+  <autocolor>June.2022 ~ April.2023<br></autocolor>
+  <autocolor><strong>Visiting Student</strong><br></autocolor>
   <autocolor>Supervisor:  Prof. Zhan Song<br></autocolor>
   <autocolor>Research Topic:  Vision Algorithms for Industrial Production.<br><br></autocolor>
 </ul>
