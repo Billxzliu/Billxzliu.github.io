@@ -14,13 +14,14 @@ I'm currently a MSc student in [University of New South Wales (UNSW)](https://ww
   <autocolor>Supervisor:  Prof. Zhan Song<br></autocolor>
   <autocolor>Research Topic:  Vision Algorithms for Industrial Production.<br><br></autocolor>
 </ul>
-<strong><span style="color: red;">For more details about my research topic, you can visit my</span></strong> <a href="https://github.com/Billxzliu/Billxzliu.github.io/raw/main/documents/Xuanzhi_Liu_CV.pdf">CV.</a>
 
 ## Research Interests
-My research focus on deploying vision algorithm in robotics and solving problems in industry.
 - **Robotics Vision**
 - **3D Reconstruction**
-- **Machine Learning**
+- **Machine Learning**  
+
+My research focus on deploying computer vision algorithm in robotics and solving problems in industry.  
+<strong><span style="color: red;">For more details about my research topic, you can visit my</span></strong> <a href="https://github.com/Billxzliu/Billxzliu.github.io/raw/main/documents/Xuanzhi_Liu_CV.pdf">CV.</a>
 
 {% include_relative _includes/publications.md %}
 {% include_relative _includes/services.md %}
