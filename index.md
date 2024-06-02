@@ -21,7 +21,12 @@ I'm currently a MSc student in [University of New South Wales (UNSW)](https://ww
 - **Machine Learning**  
 
 My research focus on deploying computer vision algorithm in robotics and solving problems in industry.  
+
 <strong><span style="color: red;">For more details about my research topic, you can visit my</span></strong> <a href="https://github.com/Billxzliu/Billxzliu.github.io/raw/main/documents/Xuanzhi_Liu_CV.pdf">CV.</a>
 
 {% include_relative _includes/publications.md %}
+
+## Patents
+An automatic visual recognition method and sorting system, [CN116213306A](http://epub.cnipa.gov.cn/patent/CN116213306A).  
+
 {% include_relative _includes/services.md %}
