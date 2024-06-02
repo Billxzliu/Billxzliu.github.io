@@ -9,7 +9,7 @@ I'm currently a MSc student in [University of New South Wales (UNSW)](https://ww
 ## Research Experiences 
 <h4 style="margin:0 10px 0;">Laboratory for Intelligent Design and Machine Vision, SIAT</h4>
 <ul style="margin:0 0 5px;">
-  <autocolor>June.2022 ~ April.2023<br></autocolor>
+  <autocolor>June.2022 ~ April.2023 (10 months)<br></autocolor>
   <autocolor><strong>Visiting Student</strong><br></autocolor>
   <autocolor>Supervisor:  Prof. Zhan Song<br></autocolor>
   <autocolor>Research Topic:  Vision Algorithms for Industrial Production.<br><br></autocolor>
@@ -17,6 +17,7 @@ I'm currently a MSc student in [University of New South Wales (UNSW)](https://ww
 <strong><span style="color: red;">For more details about my research topic, you can visit my</span></strong> <a href="https://github.com/Billxzliu/Billxzliu.github.io/raw/main/documents/Xuanzhi_Liu_CV.pdf">CV.</a>
 
 ## Research Interests
+My research focus on deploying vision algorithm in robotics and solving problems in industry.
 - **Robotics Vision**
 - **3D Reconstruction**
 - **Machine Learning**
