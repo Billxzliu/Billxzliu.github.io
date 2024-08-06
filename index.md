@@ -11,7 +11,7 @@ I'm currently a MSc student in [University of New South Wales](https://www.unsw.
 <ul style="margin:0 0 5px;">
   <autocolor>June.2022 ~ April.2023, 10 months<br></autocolor>
   <autocolor>Visiting Student<br></autocolor>
-  <autocolor>Supervisor: <a href="http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/">Zhan Song</a></autocolor>
+  <autocolor>Supervisor: Prof. <a href="http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/">Zhan Song</a></autocolor>
 </ul>
 
 <h4 style="margin:0 10px 0;">Shenzhen Guangcheng Innovation Technology Co., Ltd.</h4>
