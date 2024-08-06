@@ -31,7 +31,7 @@ I'm currently a MSc student in [University of New South Wales](https://www.unsw.
 </ul>
 
 <div style="display: flex; align-items: center; margin-bottom: 5px;">
-  <h4 style="margin:0 10px 0;">Guangdong University of Finance & Economics  <img src="./documents/Gduofe.jpg" alt="University Logo" style="margin-left: 20px; width: 40px; height: 40px;"></h4>
+  <h4 style="margin:0 10px 0;">Guangdong University of Finance & Economics  <img src="./documents/Gduofe.jpg" alt="University Logo" style="margin-left: 20px; width: 60px; height: 60px;"></h4>
 </div>
 <ul style="margin:0 0 5px;">
   <autocolor>Sep.2019 ~ June.2023<br></autocolor>
