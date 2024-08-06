@@ -3,9 +3,11 @@
 
 body {
   background-color: #fff;
-  padding:0px;
+  padding: 0px;
   font: 16.0px/1.5 Crimson Pro, serif; 
-  color:#595959;
-  font-weight:400;
-  margin:0
+  color: #595959;
+  font-weight: 400;
+  margin: 0;
+  transform: scale(1.5); /* 调整缩放比例，1是原始大小 */
+  transform-origin: 0 0; /* 设置缩放的基点为左上角 */
 }
