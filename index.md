@@ -11,7 +11,7 @@ I'm currently a MSc student in [University of New South Wales](https://www.unsw.
 <ul style="margin:0 0 5px;">
   <autocolor>June.2022 ~ April.2023, 10 months<br></autocolor>
   <autocolor>Visiting Student<br></autocolor>
-  <autocolor>Supervisor:  Prof. Zhan Song<br></autocolor>
+  <autocolor>Supervisor: <a href="http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/">Zhan Song</a></autocolor>
 </ul>
 
 <h4 style="margin:0 10px 0;">Shenzhen Guangcheng Innovation Technology Co., Ltd.</h4>
@@ -26,8 +26,6 @@ I'm currently a MSc student in [University of New South Wales](https://www.unsw.
 - **Machine Learning**  
 
 My research focus on deploying computer vision algorithm in robotics and solving problems in industry.  
-
-<strong><span style="color: red;">For more details about my research topic, you can visit my</span></strong> <a href="https://github.com/Billxzliu/Billxzliu.github.io/raw/main/documents/Xuanzhi_Liu_CV.pdf">CV.</a>
 
 {% include_relative _includes/publications.md %}
 
