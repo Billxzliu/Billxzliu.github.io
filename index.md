@@ -3,9 +3,8 @@ layout: homepage
 ---
 
 ## About Me
-<div style="margin-bottom: 15px;">
-  I'm currently a MSc student in [University of New South Wales](https://www.unsw.edu.au/), major in AI. I received my Bachelor's Degree in Computer Science and Technology from [Guangdong University of Finance & Economics](https://www.gdufe.edu.cn/main.htm) in July, 2023.   
-</div>
+I'm currently a MSc student in [University of New South Wales](https://www.unsw.edu.au/), major in AI. I received my Bachelor's Degree in Computer Science and Technology from [Guangdong University of Finance & Economics](https://www.gdufe.edu.cn/main.htm) in July, 2023.   
+
 
 ## Experiences 
 <div style="margin-bottom: 15px;">
