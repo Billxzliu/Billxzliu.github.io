@@ -7,7 +7,7 @@ layout: homepage
 I'm currently a MSc student in [University of New South Wales](https://www.unsw.edu.au/), major in AI. I received my Bachelor's Degree in Computer Science and Technology from [Guangdong University of Finance & Economics](https://www.gdufe.edu.cn/main.htm) in July, 2023.   
 
 ## Experiences 
-<h4 style="margin:0 10px 0;">Laboratory for Intelligent Design and Machine Vision, SIAT</h4>
+<h4 style="margin:0 10px 0;">Laboratory for Intelligent Design and Machine Vision, Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences</h4>
 <ul style="margin:0 0 5px;">
   <autocolor>June.2022 ~ April.2023, 10 months<br></autocolor>
   <autocolor>Visiting Student<br></autocolor>
