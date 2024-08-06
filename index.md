@@ -22,6 +22,21 @@ I'm currently a MSc student in [University of New South Wales](https://www.unsw.
 </ul>
 </div>
 
+## Education
+<div style="margin-bottom: 15px;">
+<h4 style="margin:0 10px 0;">UNSW Sydney</h4>
+<ul style="margin:0 0 5px;">
+  <autocolor>Sep.2023 ~ Aug.2025 (expected)<br></autocolor>
+  <autocolor>M.S. of Information Technology<br></autocolor>
+</ul>
+
+<h4 style="margin:0 10px 0;">Guangdong University of Finance & Economics</h4>
+<ul style="margin:0 0 5px;">
+  <autocolor>Sep.2019 ~ June.2023<br></autocolor>
+  <autocolor>B.S. of Computer Science<br></autocolor>
+</ul>
+</div>
+
 ## Research Interests
   - **Robotics Vision**
   - **3D Reconstruction**
