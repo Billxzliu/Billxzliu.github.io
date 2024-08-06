@@ -4,6 +4,4 @@ body {
     font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
     color:#595959;
     font-weight:400;
-    transform: scale(1.5); /* 调整缩放比例，1是原始大小 */
-    transform-origin: 0 0; /* 设置缩放的基点为左上角 */
   }
