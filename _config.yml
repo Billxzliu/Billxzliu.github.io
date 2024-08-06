@@ -13,10 +13,10 @@ canonical: https://minimal-light-theme.yliu.me/
 # Links 
 # If you don't need one of them, you may delete the corresponding line.
 google_scholar: https://scholar.google.com.au/citations?user=cImyOm0AAAAJ&hl=en
-#cv_link: assets/files/curriculum_vitae.pdf
+cv_link: documents/Xuanzhi_Liu_CV.pdf
 github_link: https://github.com/Billxzliu
 linkedin: https://www.linkedin.com/in/xuanzhi-liu/
-#twitter: https://twitter.com/
+twitter: https://x.com/liuxuaa
 
 # Images (e.g., your profile picture and your website's favicon) 
 # "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
