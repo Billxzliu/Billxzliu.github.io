@@ -34,8 +34,18 @@ My research focus on deploying computer vision algorithm in robotics and solving
 ## Patents
 An automatic visual recognition method and sorting system, [CN116213306A](http://epub.cnipa.gov.cn/patent/CN116213306A).  
 
-{% include_relative _includes/services.md %}
+
+## Awards
+<h4 style="margin:0 10px 0;">Excellent Graduation Thesis</h4>
+
+<ul style="margin:0 0 5px;">
+  <autocolor><strong>[Apr.2024]</strong> From Guangdong University of Finance & Economics</autocolor>
+</ul>
+
 
 ## Hobbies
-### POP Music & Singing
-I used to be a member of Music Club in my UG school
+<h4 style="margin:0 10px 0;">Pop-Music & Singing</h4>
+
+<ul style="margin:0 0 5px;">
+  <autocolor>I used to be a member of Music Club in my UG school</autocolor>
+</ul>
