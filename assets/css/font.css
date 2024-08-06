@@ -8,6 +8,4 @@ body {
   color:#595959;
   font-weight:400;
   margin:0
-  transform: scale(1.25); /* 调整缩放比例，1是原始大小 */
-  transform-origin: 0 0; 
 }
