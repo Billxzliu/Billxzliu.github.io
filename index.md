@@ -8,14 +8,14 @@ I'm currently a MSc student in [University of New South Wales](https://www.unsw.
 
 ## Experiences 
 <div style="margin-bottom: 15px;">
-<h4 style="margin:0 10px 0;">Laboratory for Intelligent Design and Machine Vision, SIAT  <img src="./documents/siat.jpg" alt="University Logo" style="margin-left: 20px; width: 60px; height: 60px;"></h4>
+<h4 style="margin:0 10px 0;">Laboratory for Intelligent Design and Machine Vision, SIAT  <img src="./documents/siat.jpg" alt="University Logo" style="margin-left: 20px; width: 30px; height: 30px;"></h4>
 <ul style="margin:0 0 5px;">
   <autocolor>June.2022 ~ April.2023, 10 months<br></autocolor>
   <autocolor>Visiting Student<br></autocolor>
   <autocolor>Supervisor: Prof. <a href="http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/">Zhan Song</a></autocolor>
 </ul>
 
-<h4 style="margin:0 10px 0;">Shenzhen Guangcheng Innovation Technology Co., Ltd.  <img src="./documents/gci.jpg" alt="University Logo" style="margin-left: 20px; width: 60px; height: 35px;"></h4>
+<h4 style="margin:0 10px 0;">Shenzhen Guangcheng Innovation Technology Co., Ltd.  <img src="./documents/gci.jpg" alt="University Logo" style="margin-left: 20px; width: 30px; height: 15px;"></h4>
 <ul style="margin:0 0 5px;">
   <autocolor>Oct.2022 ~ Feb.2023, 5 months<br></autocolor>
   <autocolor>3D Vision Intern<br></autocolor>
@@ -24,14 +24,14 @@ I'm currently a MSc student in [University of New South Wales](https://www.unsw.
 
 ## Education
 <div style="margin-bottom: 15px;">
-<h4 style="margin:0 10px 0;">UNSW Sydney  <img src="./documents/unsw.jpg" alt="University Logo" style="margin-left: 20px; width: 60px; height: 60px;"></h4>
+<h4 style="margin:0 10px 0;">UNSW Sydney  <img src="./documents/unsw.jpg" alt="University Logo" style="margin-left: 20px; width: 30px; height: 30px;"></h4>
 <ul style="margin:0 0 5px;">
   <autocolor>Sep.2023 ~ Aug.2025 (expected)<br></autocolor>
   <autocolor>M.S. of Information Technology<br></autocolor>
 </ul>
 
 <div style="display: flex; align-items: center; margin-bottom: 5px;">
-  <h4 style="margin:0 10px 0;">Guangdong University of Finance & Economics  <img src="./documents/gdufe.jpg" alt="University Logo" style="margin-left: 20px; width: 60px; height: 60px;"></h4>
+  <h4 style="margin:0 10px 0;">Guangdong University of Finance & Economics  <img src="./documents/gdufe.jpg" alt="University Logo" style="margin-left: 20px; width: 30px; height: 30px;"></h4>
 </div>
 <ul style="margin:0 0 5px;">
   <autocolor>Sep.2019 ~ June.2023<br></autocolor>
