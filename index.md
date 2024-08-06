@@ -30,12 +30,15 @@ I'm currently a MSc student in [University of New South Wales](https://www.unsw.
   <autocolor>M.S. of Information Technology<br></autocolor>
 </ul>
 
-<h4 style="margin:0 10px 0;">Guangdong University of Finance & Economics</h4>
-<img src="./documents/Gduofe.jpg" alt="Company Logo" style="margin-left: 10px; width: 20px; height: 20px;">
+<div style="display: flex; align-items: center; margin-bottom: 5px;">
+  <h4 style="margin:0 10px 0;">Guangdong University of Finance & Economics</h4>
+  <img src="./documents/Gduofe.jpg" alt="University Logo" style="margin-left: 10px; width: 25px; height: 25px;">
+</div>
 <ul style="margin:0 0 5px;">
   <autocolor>Sep.2019 ~ June.2023<br></autocolor>
   <autocolor>B.S. of Computer Science<br></autocolor>
 </ul>
+
 </div>
 
 ## Research Interests
