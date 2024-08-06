@@ -30,16 +30,21 @@ My research focus on deploying computer vision algorithm in robotics and solving
 {% include_relative _includes/publications.md %}
 
 ## Patents
-<h4 style="margin:0 10px 0;">Automatic Visual Recognition Method and Sorting System</h4>
-<ul style="margin:0 0 5px;">
-  <autocolor><strong>[CN116213306A]</strong> <a href="http://epub.cnipa.gov.cn/patent/CN116213306A">Patent Link</a> </autocolor>
-</ul>
+<div style="margin-bottom: 15px;">
+  <h4 style="margin:0 10px 0;">Automatic Visual Recognition Method and Sorting System</h4>
+  <ul style="margin:0 0 5px;">
+    <autocolor><strong>[CN116213306A]</strong> <a href="http://epub.cnipa.gov.cn/patent/CN116213306A">Patent Link</a> </autocolor>
+  </ul>
+</div>
 
 ## Awards
-<h4 style="margin:0 10px 0;">Excellent Graduation Thesis</h4>
-<ul style="margin:0 0 5px;">
-  <autocolor><strong>[Apr.2024]</strong> From Guangdong University of Finance & Economics  </autocolor>
-</ul>
+<div style="margin-bottom: 15px;">
+  <h4 style="margin:0 10px 0;">Excellent Graduation Thesis</h4>
+  <ul style="margin:0 0 5px;">
+    <autocolor><strong>[Apr.2024]</strong> From Guangdong University of Finance & Economics  </autocolor>
+  </ul>
+</div>
+
 
 ## Hobbies
 [About my hobbies](hobbies.md)
