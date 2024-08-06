@@ -4,15 +4,20 @@ layout: homepage
 
 ## About Me
 
-I'm currently a MSc student in [University of New South Wales (UNSW)](https://www.unsw.edu.au/), major in AI. I received my Bachelor's Degree in Computer Science and Technology from [Guangdong University of Finance & Economics](https://www.gdufe.edu.cn/main.htm) in July, 2023.   
+I'm currently a MSc student in [University of New South Wales](https://www.unsw.edu.au/), major in AI. I received my Bachelor's Degree in Computer Science and Technology from [Guangdong University of Finance & Economics](https://www.gdufe.edu.cn/main.htm) in July, 2023.   
 
-## Research Experiences 
+## Experiences 
 <h4 style="margin:0 10px 0;">Laboratory for Intelligent Design and Machine Vision, SIAT</h4>
 <ul style="margin:0 0 5px;">
-  <autocolor>June.2022 ~ April.2023 (10 months)<br></autocolor>
-  <autocolor><strong>Visiting Student</strong><br></autocolor>
+  <autocolor>June.2022 ~ April.2023, 10 months<br></autocolor>
+  <autocolor>Visiting Student<br></autocolor>
   <autocolor>Supervisor:  Prof. Zhan Song<br></autocolor>
-  <autocolor>Research Topic:  Vision Algorithms for Industrial Production.<br><br></autocolor>
+</ul>
+
+<h4 style="margin:0 10px 0;">Shenzhen Guangcheng Innovation Technology Co., Ltd.</h4>
+<ul style="margin:0 0 5px;">
+  <autocolor>Oct.2022 ~ Feb.2023, 5 months<br></autocolor>
+  <autocolor>3D Vision Intern<br></autocolor>
 </ul>
 
 ## Research Interests
