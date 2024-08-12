@@ -47,7 +47,7 @@ I'm currently a MSc student in [UNSW Sydney](https://www.unsw.edu.au/), major in
 </div>
 
 ## Hobbies
-[About my hobbies](hobbies.md)
+[About my hobbies ➡️](hobbies.md)
 
 ## Education
 <div style="margin-bottom: 15px;">
