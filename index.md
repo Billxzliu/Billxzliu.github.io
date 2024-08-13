@@ -40,9 +40,9 @@ I'm currently a MSc student in [UNSW Sydney](https://www.unsw.edu.au/), major in
 
 ## Awards
 <div style="margin-bottom: 15px;">
-  <h4 style="margin:0 10px 0;">Top 1% of the University</h4>
+  <h4 style="margin:0 10px 0;">Outstanding Thesis Award</h4>
   <ul style="margin:0 0 5px;">
-    <autocolor><strong>[Apr.2024]</strong> From Guangdong University of Finance & Economics</autocolor>
+    <autocolor><strong>[Top 1% of the University]</strong> From Guangdong University of Finance & Economics</autocolor>
   </ul>
 </div>
 
