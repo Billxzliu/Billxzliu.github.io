@@ -10,10 +10,10 @@ I'm currently a MSc student in [UNSW Sydney](https://www.unsw.edu.au/), major in
 <div style="margin-bottom: 15px;">
 <h4 style="margin:0 10px 0;">AI4CE Lab, New York University<img src="./documents/NYU.jfif" alt="University Logo" style="margin-left: 20px; width: 30px; height: 30px;"></h4>
 <ul style="margin:0 0 5px;">
-  <autocolor>June.2022 ~ April.2023, 10 months, on-site<br></autocolor>
+  <autocolor>August.2024 ~ Present, remote<br></autocolor>
   <autocolor>Visiting Student<br></autocolor>
-  <autocolor>Topic: 3D Vision, Robotics<br></autocolor>
-  <autocolor>Supervisor: Prof. <a href="http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/">Zhan Song</a></autocolor>  
+  <autocolor>Topic: NeRF, 3D Gaussian Splatting<br></autocolor>
+  <autocolor>Thanks to Dr. <a href="https://gaaaavin.github.io/">Xinhao Liu</a> and Prof. <a href="https://engineering.nyu.edu/faculty/chen-feng">Chen Feng</a> for the opportunity 😄</autocolor>  
 </ul>
   
 <div style="margin-bottom: 15px;">
