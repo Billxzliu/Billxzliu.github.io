@@ -10,9 +10,10 @@ I'm currently a MSc student in [UNSW Sydney](https://www.unsw.edu.au/), major in
 <div style="margin-bottom: 15px;">
 <h4 style="margin:0 10px 0;">Laboratory for Intelligent Design and Machine Vision, SIAT<img src="./documents/siat.jpg" alt="University Logo" style="margin-left: 20px; width: 30px; height: 30px;"></h4>
 <ul style="margin:0 0 5px;">
-  <autocolor>June.2022 ~ April.2023, 10 months<br></autocolor>
+  <autocolor>June.2022 ~ April.2023, 10 months, on-site<br></autocolor>
   <autocolor>Visiting Student<br></autocolor>
-  <autocolor>Supervisor: Prof. <a href="http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/">Zhan Song</a></autocolor>
+  <autocolor>Topic: 3D Vision, Robotics<br></autocolor>
+  <autocolor>Supervisor: Prof. <a href="http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/">Zhan Song</a></autocolor>  
 </ul>
 
 <h4 style="margin:0 10px 0;">Shenzhen Guangcheng Innovation Technology Co., Ltd.  <img src="./documents/gci.jpg" alt="University Logo" style="margin-left: 20px; width: 35px; height: 20px;"></h4>
