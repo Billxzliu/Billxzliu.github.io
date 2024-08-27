@@ -8,6 +8,7 @@ I'm currently a MSc student in [UNSW Sydney](https://www.unsw.edu.au/), major in
 
 ## Experiences 
 <div style="margin-bottom: 15px;">
+  
 <h4 style="margin:0 10px 0;">AI4CE Lab, New York University<img src="./documents/NYU.jfif" alt="University Logo" style="margin-left: 20px; width: 30px; height: 30px;"></h4>
 <ul style="margin:0 0 5px;">
   <autocolor>August.2024 ~ Present, remote<br></autocolor>
@@ -16,7 +17,6 @@ I'm currently a MSc student in [UNSW Sydney](https://www.unsw.edu.au/), major in
   <autocolor>Thanks to Dr. <a href="https://gaaaavin.github.io/">Xinhao Liu</a> and Prof. <a href="https://engineering.nyu.edu/faculty/chen-feng">Chen Feng</a> for the opportunity 😄</autocolor>  
 </ul>
   
-<div style="margin-bottom: 15px;">
 <h4 style="margin:0 10px 0;">Laboratory for Intelligent Design and Machine Vision, SIAT<img src="./documents/siat.jpg" alt="University Logo" style="margin-left: 20px; width: 30px; height: 30px;"></h4>
 <ul style="margin:0 0 5px;">
   <autocolor>June.2022 ~ April.2023, 10 months, on-site<br></autocolor>
@@ -30,6 +30,7 @@ I'm currently a MSc student in [UNSW Sydney](https://www.unsw.edu.au/), major in
   <autocolor>Oct.2022 ~ Feb.2023, 5 months<br></autocolor>
   <autocolor>3D Vision Intern<br></autocolor>
 </ul>
+
 </div>
 
 
