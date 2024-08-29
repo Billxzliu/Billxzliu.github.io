@@ -1,4 +1,5 @@
 main:
+
   - title: "Deep Learning models for 2D Semantic Segmentation in Natural Environments"
     authors: <strong>Xuanzhi Liu</strong>, Fang Chen, Zhenghao Li, Lin Pang, Siyuan Yang
     conference_short: COMP9517
