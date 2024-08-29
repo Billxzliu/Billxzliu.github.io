@@ -66,6 +66,8 @@ I'm currently a MSc student in [UNSW Sydney](https://www.unsw.edu.au/), major in
   </ul>
 </div>
 
+{% include_relative _includes/projects.md %}
+
 ## Awards
 <div style="margin-bottom: 15px;">
   <h4 style="margin:0 10px 0;">Outstanding Thesis Award</h4>
