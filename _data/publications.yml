@@ -6,7 +6,7 @@ main:
     conference: International Joint Conference on Robotics and Artificial Intelligence <strong>(JCRAI)</strong>, 2023.
     pdf: https://doi.org/10.1145/3632971.3632986
     #code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
-    #page: https://class-il.mpi-inf.mpg.de/mnemonics/
+    page: https://github.com/Billxzliu/JCRAI
     video: https://www.youtube.com/shorts/uqWzm9F6Tpc
     notes: Oral Presentation
     image: ./assets/img/robot.jpg
