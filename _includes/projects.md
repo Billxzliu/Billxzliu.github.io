@@ -3,7 +3,7 @@
 <div class="publications">
 <ol class="bibliography">
 
-{% assign projects = site.data.project %}
+{% assign projects = site.data.projects %}
 
 {% for link in projects %}
 <li>
