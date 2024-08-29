@@ -2,7 +2,7 @@ main:
   - title: "Deep Learning models for 2D Semantic Segmentation in Natural Environments"
     authors: <strong>Xuanzhi Liu</strong>, Fang Chen, Zhenghao Li, Lin Pang, Siyuan Yang
     conference_short: COMP9517
-    conference: COMP9517 Computer Vision, T2, 2024.
+    conference: Group Project of COMP9517 Computer Vision, T2 2024, UNSW.
     pdf: https://billxzliu.github.io/documents/COMP9517.pdf
     #code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
     #page: https://github.com/Billxzliu/JCRAI
