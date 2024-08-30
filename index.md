@@ -57,7 +57,7 @@ I'm currently a MSc student in [UNSW Sydney](https://www.unsw.edu.au/), major in
   
   My research focus on deploying computer vision algorithm in robotics and solving problems in industry.  
 {% include_relative _includes/publications.md %}
-
+{% include_relative _includes/projects.md %}
 ## Patents
 <div style="margin-bottom: 15px;">
   <h4 style="margin:0 10px 0;">Automatic Visual Recognition Method and Sorting System</h4>
@@ -66,7 +66,6 @@ I'm currently a MSc student in [UNSW Sydney](https://www.unsw.edu.au/), major in
   </ul>
 </div>
 
-{% include_relative _includes/projects.md %}
 
 ## Awards
 <div style="margin-bottom: 15px;">
