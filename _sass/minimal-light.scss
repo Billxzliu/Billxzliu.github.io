@@ -207,7 +207,7 @@ papertitle {
     }
 
     .image.avatar {
-      border-radius: 0%;
+      border-radius: 100%;
     }
 
       .image.avatar:before {
@@ -217,7 +217,7 @@ papertitle {
       .image.avatar img {
         border-radius: 100%;
         // 改头像大小
-        width: 100%;
+        width: 90%;
         padding: 20px;
         // border: 1px solid #ddd;
         // padding: 3px;
