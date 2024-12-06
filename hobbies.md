@@ -7,7 +7,7 @@ layout: homepage
 
 <h4 style="margin:0 10px 0;">🧑‍🍳 Cooking</h4>
 <ul style="margin:0 0 5px;">
-  <autocolor>Cooking is one of the best ways for me to stress less. I posted many foods on my <a href="https://www.xiaohongshu.com/user/profile/64afb86a00000000110006fa" target="_blank" style="color:inherit; text-decoration:none;">Red</a>.</autocolor>
+  <autocolor>Cooking is one of the best ways for me to stress less. I posted many foods on my RED. <a href="https://www.xiaohongshu.com/user/profile/64afb86a00000000110006fa" target="_blank" style="color:inherit; text-decoration:none;">(Link)</a>.</autocolor>
 </ul>
 
 <h4 style="margin:0 10px 0;">🎵 Pop-Music & Singing</h4>
