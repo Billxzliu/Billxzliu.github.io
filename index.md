@@ -5,6 +5,14 @@ layout: homepage
 ## About Me 🚀
 I'm currently a MSc student in [UNSW Sydney](https://www.unsw.edu.au/), major in AI. I received my Bachelor's Degree in Computer Science and Technology from [Guangdong University of Finance & Economics](https://www.gdufe.edu.cn/main.htm) in July, 2023.   
 
+📢📢 **I'm looking for a RA/Ph.D position in Robotics and Machine Vision area, please feel free to drop me an email if you are hiring.**
+
+## Research Interests 🔥
+  - Robotics Vision
+  - 3D Reconstruction
+  - Machine Learning  
+  
+  My research focus on deploying computer vision algorithm in robotics and solving problems in industry.  
 
 ## Experiences 
 <div style="margin-bottom: 15px;">
@@ -50,12 +58,6 @@ I'm currently a MSc student in [UNSW Sydney](https://www.unsw.edu.au/), major in
 </ul>
 </div>
 
-## Research Interests 🔥
-  - **Robotics Vision**
-  - **3D Reconstruction**
-  - **Machine Learning**  
-  
-  My research focus on deploying computer vision algorithm in robotics and solving problems in industry.  
 {% include_relative _includes/publications.md %}
 {% include_relative _includes/projects.md %}
 ## Patents
