@@ -21,7 +21,7 @@ I'm currently a MSc student in [UNSW Sydney](https://www.unsw.edu.au/), major in
 <ul style="margin:0 0 5px;">
   <autocolor>Dec.2024 ~ Present, on-site<br></autocolor>
   <autocolor>Research Assistant<br></autocolor>
-  <autocolor>Topic: Machine Vision, Robotics<br></autocolor>
+  <autocolor>Topics: Machine Vision, Robotics<br></autocolor>
   <autocolor>Supervisor: Prof. <a href="http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/">Zhan Song</a></autocolor>  
 </ul>
 
@@ -29,13 +29,13 @@ I'm currently a MSc student in [UNSW Sydney](https://www.unsw.edu.au/), major in
 <ul style="margin:0 0 5px;">
   <autocolor>June.2022 ~ April.2023, 10 months, on-site<br></autocolor>
   <autocolor>Visiting Student<br></autocolor>
-  <autocolor>Topic: 3D Vision, Robotics<br></autocolor>
+  <autocolor>Topics: 3D Vision, Robotics<br></autocolor>
   <autocolor>Supervisor: Prof. <a href="http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/">Zhan Song</a></autocolor>  
 </ul>
 
 <h4 style="margin:0 10px 0;">Shenzhen Guangcheng Innovation Technology Co., Ltd.  <img src="./documents/gci.jpg" alt="University Logo" style="margin-left: 20px; width: 35px; height: 20px;"></h4>
 <ul style="margin:0 0 5px;">
-  <autocolor>Oct.2022 ~ Feb.2023, 5 months<br></autocolor>
+  <autocolor>Oct.2022 ~ Feb.2023, 5 months, hybrid<br></autocolor>
   <autocolor>3D Vision Intern<br></autocolor>
 </ul>
 
