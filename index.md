@@ -21,7 +21,7 @@ I'm currently a MSc student in [UNSW Sydney](https://www.unsw.edu.au/), major in
 <ul style="margin:0 0 5px;">
   <autocolor>Dec.2024 ~ Present, on-site<br></autocolor>
   <autocolor>Research Assistant<br></autocolor>
-  <autocolor>Topics: Machine Vision, Robotics<br></autocolor>
+  <autocolor>Topics: Machine Vision, Robotics Grasping Tasks<br></autocolor>
   <autocolor>Supervisor: Prof. <a href="http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/">Zhan Song</a></autocolor>  
 </ul>
 
