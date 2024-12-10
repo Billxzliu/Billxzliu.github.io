@@ -8,9 +8,9 @@ I'm currently a MSc student in [UNSW Sydney](https://www.unsw.edu.au/), major in
 📢📢 <font style="background: yellow"><strong> I'm looking for a RA/Ph.D position in Robotics and Machine Vision, please drop me an email if you are interested in my research.</strong></font>
 
 ## Research Interests 🔥
-  - Robotics Vision
+  - Robotics Grasping Tasks
   - 3D Reconstruction
-  - Machine Learning  
+  - Machine Vision  
   
   My research focus on deploying machine vision algorithm in robotics and solving problems in industry.  
 
