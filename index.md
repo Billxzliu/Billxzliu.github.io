@@ -3,7 +3,7 @@ layout: homepage
 ---
 
 ## About Me 🚀
-I'm currently a MSc student in [UNSW Sydney](https://www.unsw.edu.au/), major in AI. I received my Bachelor's Degree in Computer Science and Technology from [Guangdong University of Finance & Economics](https://www.gdufe.edu.cn/main.htm) in July, 2023.   
+Hello guys😃, I'm Xuanzhi Liu, welcome to my homepage. I'm pursuing my Master's degree in UNSW Sydney, Australia. My research mainly focus on Machine Vision algorithms and their applications in industry. In my spare time, I'm good at cooking🧑‍🍳 and singing🎵. My MBTI is ESFJ. 
 
 📢📢 <font style="background: yellow"><strong> I'm looking for a RA/Ph.D position in Robotics and Machine Vision, please drop me an email if you are interested in my research.</strong></font>
 
@@ -12,7 +12,8 @@ I'm currently a MSc student in [UNSW Sydney](https://www.unsw.edu.au/), major in
   - 3D Reconstruction
   - Machine Vision  
   
-  My research focus on deploying machine vision algorithm in robotics and solving problems in industry.  
+  My research mainly focus on deploying machine vision algorithm in robotics and solving problems in industry. In addition, I also do some researches in Static Analysis and Graph Algorithm under the supervised of [Dr. Zhengyi Yang](http://www.zhengyi.one/). Here are some useful links:
+  
 
 ## Experiences 
 <div style="margin-bottom: 15px;">
