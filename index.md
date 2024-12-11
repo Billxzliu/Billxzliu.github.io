@@ -12,7 +12,7 @@ Hello guys😃, welcome to my homepage. I'm Xuanzhi Liu. I'm pursuing my Master'
   - 3D Reconstruction
   - Machine Vision  
   
-  My research mainly focus on deploying machine vision algorithm in robotics and solving problems in industry. In addition, I also do some researches in Static Analysis and Graph Algorithm under the supervised of [Dr. Zhengyi Yang](http://www.zhengyi.one/).  
+  My research mainly focus on deploying machine vision algorithm in robotics and solving problems in industry. In addition, I also do some researches in Static Analysis and Graph Algorithm.  
   
 ## Experiences 
 <div style="margin-bottom: 15px;">
