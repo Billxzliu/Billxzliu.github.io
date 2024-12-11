@@ -3,7 +3,7 @@ layout: homepage
 ---
 
 ## About Me 🚀
-Hello guys😃, welcome to my homepage. I'm Xuanzhi Liu. I'm pursuing my Master's degree in UNSW Sydney, Australia. My research mainly focus on Machine Vision algorithms and their applications in industry. In my spare time, I'm good at cooking🧑‍🍳 and singing🎵. My MBTI is ESFJ. 
+Hello guys😃, welcome to my homepage. I'm Xuanzhi Liu. I'm pursuing my Master's degree in UNSW Sydney, Australia. My research mainly focus on Machine Vision algorithms and their applications in industry. In my spare time, I'm good at cooking🧑‍🍳 and singing pop-music🎵. My MBTI is ESFJ. 
 
 📢📢 <font style="background: yellow"><strong> I'm looking for a RA/Ph.D position in Robotics and Machine Vision, please drop me an email if you are interested in my research.</strong></font>
 
