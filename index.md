@@ -3,7 +3,7 @@ layout: homepage
 ---
 
 ## About Me 🚀
-Hello guys😃, I'm Xuanzhi Liu, welcome to my homepage. I'm pursuing my Master's degree in UNSW Sydney, Australia. My research mainly focus on Machine Vision algorithms and their applications in industry. In my spare time, I'm good at cooking🧑‍🍳 and singing🎵. My MBTI is ESFJ. 
+Hello guys😃, welcome to my homepage. I'm Xuanzhi Liu. I'm pursuing my Master's degree in UNSW Sydney, Australia. My research mainly focus on Machine Vision algorithms and their applications in industry. In my spare time, I'm good at cooking🧑‍🍳 and singing🎵. My MBTI is ESFJ. 
 
 📢📢 <font style="background: yellow"><strong> I'm looking for a RA/Ph.D position in Robotics and Machine Vision, please drop me an email if you are interested in my research.</strong></font>
 
@@ -12,9 +12,8 @@ Hello guys😃, I'm Xuanzhi Liu, welcome to my homepage. I'm pursuing my Master'
   - 3D Reconstruction
   - Machine Vision  
   
-  My research mainly focus on deploying machine vision algorithm in robotics and solving problems in industry. In addition, I also do some researches in Static Analysis and Graph Algorithm under the supervised of [Dr. Zhengyi Yang](http://www.zhengyi.one/). Here are some useful links:
+  My research mainly focus on deploying machine vision algorithm in robotics and solving problems in industry. In addition, I also do some researches in Static Analysis and Graph Algorithm under the supervised of [Dr. Zhengyi Yang](http://www.zhengyi.one/).  
   
-
 ## Experiences 
 <div style="margin-bottom: 15px;">
 
@@ -69,7 +68,6 @@ Hello guys😃, I'm Xuanzhi Liu, welcome to my homepage. I'm pursuing my Master'
   </ul>
 </div>
 
-
 ## Awards
 <div style="margin-bottom: 15px;">
   <h4 style="margin:0 10px 0;">Outstanding Thesis Award</h4>
@@ -78,7 +76,20 @@ Hello guys😃, I'm Xuanzhi Liu, welcome to my homepage. I'm pursuing my Master'
   </ul>
 </div>
 
-## Hobbies
-[About my hobbies ➡️](hobbies.md)
+## Learning Notes
+[Static Analysis](https://zhuanlan.zhihu.com/p/681560790)  
+[Neuron Network: Forward Propagation](https://blog.csdn.net/debby233/article/details/126364933?spm=1001.2014.3001.5502)  
+[Neuron Network: Backward Propagation](https://blog.csdn.net/debby233/article/details/126426619?spm=1001.2014.3001.5502)  
+[Semantic Segmentation: Create your dataset and implement U-Net](https://blog.csdn.net/debby233/article/details/125973500?spm=1001.2014.3001.5502)  
+[Semantic Segmentation: User guide of Augmentor](https://blog.csdn.net/debby233/article/details/126059940?spm=1001.2014.3001.5502)  
+[Semantic Segmentation: Copy_Paste Augmentation](https://blog.csdn.net/debby233/article/details/126100085?spm=1001.2014.3001.5502)  
+[Semantic Segmentation: Progress of implementing a project](https://blog.csdn.net/debby233/article/details/126221264?spm=1001.2014.3001.5502)  
+[Object Detection: Data Augmentation](https://blog.csdn.net/debby233/article/details/126016717?spm=1001.2014.3001.5502)  
+[Object Detection: Make your dataset](https://blog.csdn.net/debby233/article/details/125875361?spm=1001.2014.3001.5502)  
+
+
+
+
+
 
 
