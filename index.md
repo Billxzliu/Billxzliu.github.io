@@ -5,14 +5,12 @@ layout: homepage
 ## About Me 🚀
 Hello guys😃, welcome to my homepage. I'm Xuanzhi Liu. I'm pursuing my Master's degree in UNSW Sydney, Australia. My research mainly focus on Machine Vision algorithms and their applications in industry. In my spare time, I'm good at cooking🧑‍🍳 and singing pop-music🎵. My MBTI is ESFJ. 
 
-📢📢 <font style="background: yellow"><strong> I'm looking for a RA/Ph.D position in Robotics and Machine Vision, please drop me an email if you are interested in my research.</strong></font>
+📢📢 <font style="background: yellow"><strong> I'm looking for a RA/Ph.D position, please drop me an email if you are recruiting.</strong></font>
 
 ## Research Interests 🔥
-  - Robotics Grasping Tasks
-  - 3D Reconstruction
-  - Machine Vision  
-  
-  My research mainly focus on deploying machine vision algorithm in robotics and solving problems in industry. In addition, I also do some researches in Static Analysis and Graph Algorithm.  
+During SIAT work, my research mainly focus on **Robotics Grasping Tasks** and **Machine Vision**, under the supervision of [Prof. Zhan Song](http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/). Meanwhile, as a Master's student at UNSW Sydney, I also do some works on **Static Analysis** and **Graph Algorithm** under the supervision of [Dr. Zhengyi Yang](http://www.zhengyi.one/).    
+**Why my researches involved two different area?**  
+I think learning from different areas can build my knowledge system and maybe one day I can introduce ideas from one area to another one, which would be my benefit when compared with other researchers who only work in one area.
   
 ## Experiences 
 <div style="margin-bottom: 15px;">
