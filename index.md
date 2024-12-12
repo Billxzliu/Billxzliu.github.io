@@ -8,9 +8,9 @@ Hello guys😃, welcome to my homepage. I'm Xuanzhi Liu. I'm pursuing my Master'
 📢📢 <font style="background: yellow"><strong> I'm looking for a RA/Ph.D position, please drop me an email if you are recruiting.</strong></font>
 
 ## Research Interests 🔥
-During SIAT work, my research mainly focus on **Robotics Grasping Tasks** and **Machine Vision**, under the supervision of [Prof. Zhan Song](http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/). Meanwhile, as a Master's student at UNSW Sydney, I also do some works on **Static Analysis** and **Graph Algorithm** under the supervision of [Dr. Zhengyi Yang](http://www.zhengyi.one/).  
+During SIAT work, my research mainly focus on **Robotics Grasping Tasks🤖** and **Machine Vision👀**, under the supervision of [Prof. Zhan Song](http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/). Meanwhile, as a Master's student at UNSW Sydney, I also do some works on **Static Analysis** and **Graph Algorithm** under the supervision of [Dr. Zhengyi Yang](http://www.zhengyi.one/).  
   
-## Experiences 
+## Experiences 🌏
 <div style="margin-bottom: 15px;">
 
 <h4 style="margin:0 10px 0;">Research Center for Machine Vision, SIAT<img src="./documents/siat.jpg" alt="University Logo" style="margin-left: 20px; width: 30px; height: 30px;"></h4>
@@ -37,7 +37,7 @@ During SIAT work, my research mainly focus on **Robotics Grasping Tasks** and **
 
 </div>
 
-## Education
+## Education 🏫
 <div style="margin-bottom: 15px;">
 <h4 style="margin:0 10px 0;">UNSW Sydney<img src="./documents/unsw.jpg" alt="University Logo" style="margin-left: 20px; width: 30px; height: 30px;"></h4>
 <ul style="margin:0 0 5px;">
@@ -56,7 +56,8 @@ During SIAT work, my research mainly focus on **Robotics Grasping Tasks** and **
 
 {% include_relative _includes/publications.md %}
 {% include_relative _includes/projects.md %}
-## Patents
+
+## Patents 🧰
 <div style="margin-bottom: 15px;">
   <h4 style="margin:0 10px 0;">Automatic Visual Recognition Method and Sorting System</h4>
   <ul style="margin:0 0 5px;">
@@ -64,7 +65,7 @@ During SIAT work, my research mainly focus on **Robotics Grasping Tasks** and **
   </ul>
 </div>
 
-## Awards
+## Awards 🥇
 <div style="margin-bottom: 15px;">
   <h4 style="margin:0 10px 0;">Outstanding Thesis Award</h4>
   <ul style="margin:0 0 5px;">
@@ -72,7 +73,7 @@ During SIAT work, my research mainly focus on **Robotics Grasping Tasks** and **
   </ul>
 </div>
 
-## Learning Notes
+## Learning Notes ✍️
 [Static Analysis](https://zhuanlan.zhihu.com/p/681560790)  
 [Neuron Network: Forward Propagation](https://blog.csdn.net/debby233/article/details/126364933?spm=1001.2014.3001.5502)  
 [Neuron Network: Backward Propagation](https://blog.csdn.net/debby233/article/details/126426619?spm=1001.2014.3001.5502)  
