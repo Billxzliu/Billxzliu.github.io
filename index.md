@@ -55,7 +55,6 @@ During SIAT work, my research mainly focus on **Robotics Grasping Tasks🤖** an
 </div>
 
 {% include_relative _includes/publications.md %}
-{% include_relative _includes/projects.md %}
 
 ## Patents 🧰
 <div style="margin-bottom: 15px;">
@@ -64,6 +63,9 @@ During SIAT work, my research mainly focus on **Robotics Grasping Tasks🤖** an
     <autocolor><strong>[CN116213306A]</strong> <a href="http://epub.cnipa.gov.cn/patent/CN116213306A">Patent Link</a> </autocolor>
   </ul>
 </div>
+
+{% include_relative _includes/projects.md %}
+
 
 ## Awards 🥇
 <div style="margin-bottom: 15px;">
