@@ -10,7 +10,7 @@ main:
     notes: "Full Mark, Top 1% of Course"
     image: "./documents/COMP9517.jpg"
     
-  - title: "Improvement of SVF based on Graph Database"
+  - title: "Static Value-Flow Analysis based on Graph Databases"
     authors: "<strong>Xuanzhi Liu</strong>"
     conference_short: "Research Project"
     conference: "Supervisor: Dr. Zhengyi Yang, UNSW Sydney"
