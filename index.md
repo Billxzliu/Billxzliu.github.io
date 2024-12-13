@@ -8,7 +8,7 @@ Hello guys😃, welcome to my homepage. I'm Xuanzhi Liu. I'm pursuing my Master'
 📢📢 <font style="background: yellow"><strong> I'm looking for a RA/Ph.D position, please drop me an email if you are recruiting.</strong></font>
 
 ## Research Interests 🔥
-During SIAT work, my research mainly focus on **Robotics Grasping Tasks🤖** and **Machine Vision👀**, under the supervision of [Prof. Zhan Song](http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/). Meanwhile, as a Master's student at UNSW Sydney, I also do some works on **Static Analysis** and **Graph Algorithm** under the supervision of [Dr. Zhengyi Yang](http://www.zhengyi.one/).  
+During SIAT work, my research mainly focus on **Robotics Grasping Tasks🤖** and **Machine Vision👀**, under the supervision of [Prof. Zhan Song](http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/). 
   
 ## Experiences 🌏
 <div style="margin-bottom: 15px;">
