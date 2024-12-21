@@ -37,23 +37,6 @@ During SIAT work, my research mainly focus on **Robotics🤖 & Machine Vision ap
 
 </div>
 
-## Education 
-<div style="margin-bottom: 15px;">
-<h4 style="margin:0 10px 0;">University of New South Wales</h4>
-<ul style="margin:0 0 5px;">
-  <autocolor>Sep.2023 ~ May.2025 (expected)<br></autocolor>
-  <autocolor>M.S. of Information Technology<br></autocolor>
-</ul>
-
-<div style="display: flex; align-items: center; margin-bottom: 5px;">
-  <h4 style="margin:0 10px 0;">Guangdong University of Finance & Economics</h4>
-</div>
-<ul style="margin:0 0 5px;">
-  <autocolor>Sep.2019 ~ June.2023<br></autocolor>
-  <autocolor>B.S. of Computer Science<br></autocolor>
-</ul>
-</div>
-
 {% include_relative _includes/publications.md %}
 {% include_relative _includes/projects.md %}
 
@@ -73,7 +56,24 @@ During SIAT work, my research mainly focus on **Robotics🤖 & Machine Vision ap
   </ul>
 </div>
 
-## Learning Notes 
+## Education 
+<div style="margin-bottom: 15px;">
+<h4 style="margin:0 10px 0;">University of New South Wales</h4>
+<ul style="margin:0 0 5px;">
+  <autocolor>Sep.2023 ~ May.2025 (expected)<br></autocolor>
+  <autocolor>M.S. of Information Technology<br></autocolor>
+</ul>
+
+<div style="display: flex; align-items: center; margin-bottom: 5px;">
+  <h4 style="margin:0 10px 0;">Guangdong University of Finance & Economics</h4>
+</div>
+<ul style="margin:0 0 5px;">
+  <autocolor>Sep.2019 ~ June.2023<br></autocolor>
+  <autocolor>B.S. of Computer Science<br></autocolor>
+</ul>
+</div>
+
+## Notes 
 [Static Analysis](https://zhuanlan.zhihu.com/p/681560790)  
 [Neuron Network: Forward Propagation](https://blog.csdn.net/debby233/article/details/126364933?spm=1001.2014.3001.5502)  
 [Neuron Network: Backward Propagation](https://blog.csdn.net/debby233/article/details/126426619?spm=1001.2014.3001.5502)  
