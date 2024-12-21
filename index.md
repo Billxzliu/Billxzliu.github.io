@@ -16,7 +16,7 @@ During SIAT work, my research mainly focus on **Robotics🤖 & Machine Vision ap
 <h4 style="margin:0 10px 0;">Research Center for Machine Vision, SIAT</h4>
 <ul style="margin:0 0 5px;">
   <autocolor>Dec.2024 ~ Present, on-site<br></autocolor>
-  <autocolor>Research Assistant<br></autocolor>
+  <autocolor>Internship<br></autocolor>
   <autocolor>Topics: High precise 6D pose estimation<br></autocolor>
   <autocolor>Supervisor: Prof. <a href="http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/">Zhan Song</a></autocolor>  
 </ul>
