@@ -8,7 +8,7 @@ Hello guys😃, welcome to my homepage. I'm Xuanzhi Liu. I'm pursuing my Master'
 📢📢 <font style="background: yellow"><strong> I'm looking for potential RA/Ph.D opportunity, please drop me an email if you are recruiting.</strong></font>
 
 ## Research Interests
-During SIAT work, my research mainly focus on **Robotics Grasping Tasks🤖** and **Machine Vision👀**, under the supervision of Prof. [Zhan Song](http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/). 
+During SIAT work, my research mainly focus on **Robotics🤖 & Machine Vision applications in industry👀**, under the supervision of Prof. [Zhan Song](http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/). 
   
 ## Experiences 
 <div style="margin-bottom: 15px;">
