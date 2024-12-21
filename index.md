@@ -41,7 +41,7 @@ During SIAT work, my research mainly focus on **Robotics🤖 & Machine Vision ap
 <div style="margin-bottom: 15px;">
 <h4 style="margin:0 10px 0;">University of New South Wales</h4>
 <ul style="margin:0 0 5px;">
-  <autocolor>Sep.2023 ~ Aug.2025 (expected)<br></autocolor>
+  <autocolor>Sep.2023 ~ May.2025 (expected)<br></autocolor>
   <autocolor>M.S. of Information Technology<br></autocolor>
 </ul>
 
