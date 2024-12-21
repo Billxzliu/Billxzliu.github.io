@@ -5,7 +5,7 @@ layout: homepage
 ## About Me 
 Hello guys😃, welcome to my homepage. I'm Xuanzhi Liu. I'm pursuing my Master's degree in UNSW Sydney, Australia. My research mainly focus on Machine Vision algorithms and their applications in industry. In my spare time, I'm good at cooking🧑‍🍳 and singing pop-music🎵. My MBTI is ESFJ. 
 
-📢📢 <font style="background: yellow"><strong> I'm looking for a RA/Ph.D position, please drop me an email if you are recruiting.</strong></font>
+📢📢 <font style="background: yellow"><strong> I'm looking for a RA/Ph.D opportunity, please drop me an email if you are recruiting.</strong></font>
 
 ## Research Interests
 During SIAT work, my research mainly focus on **Robotics Grasping Tasks🤖** and **Machine Vision👀**, under the supervision of [Prof. Zhan Song](http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/). 
@@ -17,7 +17,7 @@ During SIAT work, my research mainly focus on **Robotics Grasping Tasks🤖** an
 <ul style="margin:0 0 5px;">
   <autocolor>Dec.2024 ~ Present, on-site<br></autocolor>
   <autocolor>Research Assistant<br></autocolor>
-  <autocolor>Topics: Machine Vision, High precise Robotics Grasping Tasks<br></autocolor>
+  <autocolor>Topics: High precise 6D pose estimation<br></autocolor>
   <autocolor>Supervisor: Prof. <a href="http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/">Zhan Song</a></autocolor>  
 </ul>
 
@@ -25,7 +25,7 @@ During SIAT work, my research mainly focus on **Robotics Grasping Tasks🤖** an
 <ul style="margin:0 0 5px;">
   <autocolor>June.2022 ~ April.2023, 10 months, on-site<br></autocolor>
   <autocolor>Visiting Student<br></autocolor>
-  <autocolor>Topics: 3D Vision, Robotics Grasping Tasks in industry<br></autocolor>
+  <autocolor>Topics: Robotics Grasping tasks<br></autocolor>
   <autocolor>Supervisor: Prof. <a href="http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/">Zhan Song</a></autocolor>  
 </ul>
 
