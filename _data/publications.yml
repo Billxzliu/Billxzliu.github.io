@@ -4,9 +4,9 @@ main:
     authors: <strong>Xuanzhi Liu</strong>, Jixin Liang, Yuping Ye, Zhan Song, Juan Zhao
     conference_short: JCRAI
     conference: International Joint Conference on Robotics and Artificial Intelligence <strong>(JCRAI)</strong>, 2023.
-    pdf: https://doi.org/10.1145/3632971.3632986
+    pdf: https://billxzliu.github.io//sorting-system/
     #code: https://github.com/yaoyao-liu/class-incremental-learning/tree/main/mnemonics-training
-    page: https://github.com/Billxzliu/JCRAI
+    page: https://billxzliu.github.io//sorting-system/
     video: https://www.youtube.com/shorts/uqWzm9F6Tpc
     notes: Oral Presentation
     image: ./assets/img/robot.jpg
