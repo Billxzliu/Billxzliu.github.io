@@ -13,6 +13,7 @@ My research mainly focus on Robotics🤖 & Machine Vision applications in indust
 - Computer Vision
   
 ## Experiences 
+📢 I will join [Deep Bit Lap](https://mypage.cuhk.edu.cn/academics/lizhen/) @[CUHK(SZ)](https://fnii.cuhk.edu.cn/page/17) as a research assistant, work with Prof. Zhen Li and Dr. Yatong Han.
 <div style="margin-bottom: 15px;">
 
 <h4 style="margin:0 10px 0;">Research Center for Machine Vision, SIAT</h4>
