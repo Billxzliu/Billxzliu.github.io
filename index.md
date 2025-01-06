@@ -7,13 +7,13 @@ Hello guys😃, welcome to my homepage. I'm Xuanzhi Liu. I'm pursuing my Master'
 
 ## Research Interests
 My research mainly focus on Robotics🤖 & Machine Vision applications in industry👀, including:
-- 6D Pose Estimation
+- Pose Estimation
 - 3D Reconstruction (Point-Cloud)
 - Deep Learning
 - Computer Vision
   
 ## Experiences 
-📢 I will join [Deep Bit Lap](https://mypage.cuhk.edu.cn/academics/lizhen/) @[CUHK(SZ)](https://fnii.cuhk.edu.cn/page/17) as a research assistant, work with Prof. Zhen Li and Dr. Yatong Han.
+📢 I will join [Deep Bit Lab](https://mypage.cuhk.edu.cn/academics/lizhen/) @[CUHK(SZ)](https://fnii.cuhk.edu.cn/page/17) as a research assistant, work with Prof. Zhen Li and Dr. Yatong Han.
 <div style="margin-bottom: 15px;">
 
 <h4 style="margin:0 10px 0;">Research Center for Machine Vision, SIAT</h4>
