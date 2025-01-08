@@ -13,12 +13,18 @@ My research mainly focus on Robotics🤖 & Machine Vision applications in indust
 - Computer Vision
   
 ## Experiences 
-📢 I will join [Deep Bit Lab](https://mypage.cuhk.edu.cn/academics/lizhen/) @[CUHK(SZ)](https://fnii.cuhk.edu.cn/page/17) as a research assistant, work with Prof. Zhen Li and Dr. Yatong Han.
 <div style="margin-bottom: 15px;">
-
+<h4 style="margin:0 10px 0;">Deep Bit Lab, CUHK(SZ)</h4>
+<ul style="margin:0 0 5px;">
+  <autocolor>Jan.2025 ~ Present<br></autocolor>
+  <autocolor>Research Assistant<br></autocolor>
+  <autocolor>Topics: Embodied Intelligence<br></autocolor>
+  <autocolor>Supervisor: Prof. <a href="https://mypage.cuhk.edu.cn/academics/lizhen/">Zhen Li </a>and Dr. Yatong Han</autocolor>  
+</ul>
+  
 <h4 style="margin:0 10px 0;">Research Center for Machine Vision, SIAT</h4>
 <ul style="margin:0 0 5px;">
-  <autocolor>Dec.2024 ~ Present, on-site<br></autocolor>
+  <autocolor>Dec.2024 ~ Present<br></autocolor>
   <autocolor>Internship<br></autocolor>
   <autocolor>Topics: 6D pose estimation<br></autocolor>
   <autocolor>Supervisor: Prof. <a href="http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/">Zhan Song</a></autocolor>  
@@ -26,7 +32,7 @@ My research mainly focus on Robotics🤖 & Machine Vision applications in indust
 
 <h4 style="margin:0 10px 0;">Research Center for Machine Vision, SIAT</h4>
 <ul style="margin:0 0 5px;">
-  <autocolor>June.2022 ~ April.2023, 10 months, on-site<br></autocolor>
+  <autocolor>June.2022 ~ April.2023, 10 months<br></autocolor>
   <autocolor>Visiting Student<br></autocolor>
   <autocolor>Topics: Robotics Grasping tasks<br></autocolor>
   <autocolor>Supervisor: Prof. <a href="http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/">Zhan Song</a></autocolor>  
@@ -34,7 +40,7 @@ My research mainly focus on Robotics🤖 & Machine Vision applications in indust
 
 <h4 style="margin:0 10px 0;">Shenzhen Guangcheng Innovation Technology Co., Ltd. </h4>
 <ul style="margin:0 0 5px;">
-  <autocolor>Oct.2022 ~ Feb.2023, 5 months, hybrid<br></autocolor>
+  <autocolor>Oct.2022 ~ Feb.2023, 5 months<br></autocolor>
   <autocolor>3D Vision Intern<br></autocolor>
 </ul>
 
@@ -76,7 +82,7 @@ My research mainly focus on Robotics🤖 & Machine Vision applications in indust
 </ul>
 </div>
 
-## Notes 
+## Notes (Chinese)
 [Static Analysis](https://zhuanlan.zhihu.com/p/681560790)  
 [Neuron Network: Forward Propagation](https://blog.csdn.net/debby233/article/details/126364933?spm=1001.2014.3001.5502)  
 [Neuron Network: Backward Propagation](https://blog.csdn.net/debby233/article/details/126426619?spm=1001.2014.3001.5502)  
