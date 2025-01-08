@@ -36,14 +36,6 @@ My research mainly focus on Robotics🤖 & Machine Vision applications in indust
   <autocolor>Visiting Student<br></autocolor>
   <autocolor>Topics: Robotics Grasping tasks<br></autocolor>
   <autocolor>Supervisor: Prof. <a href="http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/">Zhan Song</a></autocolor>  
-</ul>
-
-<h4 style="margin:0 10px 0;">Shenzhen Guangcheng Innovation Technology Co., Ltd. </h4>
-<ul style="margin:0 0 5px;">
-  <autocolor>Oct.2022 ~ Feb.2023, 5 months<br></autocolor>
-  <autocolor>3D Vision Intern<br></autocolor>
-</ul>
-
 </div>
 
 {% include_relative _includes/publications.md %}
