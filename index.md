@@ -36,6 +36,7 @@ My research mainly focus on Robotics🤖 & Machine Vision applications in indust
   <autocolor>Visiting Student<br></autocolor>
   <autocolor>Topics: Robotics Grasping tasks<br></autocolor>
   <autocolor>Supervisor: Prof. <a href="http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/">Zhan Song</a></autocolor>  
+  </ul>
 </div>
 
 {% include_relative _includes/publications.md %}
@@ -47,7 +48,7 @@ My research mainly focus on Robotics🤖 & Machine Vision applications in indust
   <ul style="margin:0 0 5px;">
     <autocolor><strong>[CN116213306A]</strong> <a href="http://epub.cnipa.gov.cn/patent/CN116213306A">Patent Link</a> </autocolor>
   </ul>
-</div>
+</div>  
 
 ## Awards 
 <div style="margin-bottom: 15px;">
