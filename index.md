@@ -14,7 +14,7 @@ My research mainly focus on Robotics🤖 & Machine Vision applications in indust
   
 ## Experiences 
 <div style="margin-bottom: 15px;">
-<h4 style="margin:0 10px 0;">Deep Bit Lab, CUHK(SZ)</h4>
+<h4 style="margin:0 10px 0;">Deep Bit Lab, The Chinese University of Hong Kong, Shenzhen</h4>
 <ul style="margin:0 0 5px;">
   <autocolor>Jan.2025 ~ Present<br></autocolor>
   <autocolor>Research Assistant<br></autocolor>
@@ -22,7 +22,7 @@ My research mainly focus on Robotics🤖 & Machine Vision applications in indust
   <autocolor>Supervisor: Prof. <a href="https://mypage.cuhk.edu.cn/academics/lizhen/">Zhen Li </a>and Dr. Yatong Han</autocolor>  
 </ul>
   
-<h4 style="margin:0 10px 0;">Research Center for Machine Vision, SIAT</h4>
+<h4 style="margin:0 10px 0;">Research Center for Machine Vision, Shenzhen Institutes of Advanced Technology</h4>
 <ul style="margin:0 0 5px;">
   <autocolor>Dec.2024 ~ Present<br></autocolor>
   <autocolor>Internship<br></autocolor>
@@ -30,7 +30,7 @@ My research mainly focus on Robotics🤖 & Machine Vision applications in indust
   <autocolor>Supervisor: Prof. <a href="http://english.siat.cas.cn/SI2017/IAIT2017/RC1/CPE_20529/">Zhan Song</a></autocolor>  
 </ul>
 
-<h4 style="margin:0 10px 0;">Research Center for Machine Vision, SIAT</h4>
+<h4 style="margin:0 10px 0;">Research Center for Machine Vision, Shenzhen Institutes of Advanced Technology</h4>
 <ul style="margin:0 0 5px;">
   <autocolor>June.2022 ~ April.2023, 10 months<br></autocolor>
   <autocolor>Visiting Student<br></autocolor>
