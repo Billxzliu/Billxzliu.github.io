@@ -71,7 +71,7 @@ My research mainly focus on Robotics🤖 & Machine Vision👀 applications in in
 <div style="margin-bottom: 15px;">
   <h4 style="margin:0 10px 0;">Outstanding Thesis Award</h4>
   <ul style="margin:0 0 5px;">
-    <autocolor><strong>[Top 1% of the University]</strong> From Guangdong University of Finance & Economics</autocolor>
+    <autocolor><span style="color: red;">Top 1% of the University</span></autocolor>
   </ul>
 </div>
 
