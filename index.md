@@ -39,6 +39,23 @@ My research mainly focus on Robotics🤖 & Machine Vision applications in indust
   </ul>
 </div>
 
+## Education 
+<div style="margin-bottom: 15px;">
+<h4 style="margin:0 10px 0;">University of New South Wales</h4>
+<ul style="margin:0 0 5px;">
+  <autocolor>Sep.2023 ~ May.2025 (expected)<br></autocolor>
+  <autocolor>M.S. of Information Technology<br></autocolor>
+</ul>
+
+<div style="display: flex; align-items: center; margin-bottom: 5px;">
+  <h4 style="margin:0 10px 0;">Guangdong University of Finance & Economics</h4>
+</div>
+<ul style="margin:0 0 5px;">
+  <autocolor>Sep.2019 ~ June.2023<br></autocolor>
+  <autocolor>B.S. of Computer Science<br></autocolor>
+</ul>
+</div>
+
 {% include_relative _includes/publications.md %}
 {% include_relative _includes/projects.md %}
 
@@ -56,23 +73,6 @@ My research mainly focus on Robotics🤖 & Machine Vision applications in indust
   <ul style="margin:0 0 5px;">
     <autocolor><strong>[Top 1% of the University]</strong> From Guangdong University of Finance & Economics</autocolor>
   </ul>
-</div>
-
-## Education 
-<div style="margin-bottom: 15px;">
-<h4 style="margin:0 10px 0;">University of New South Wales</h4>
-<ul style="margin:0 0 5px;">
-  <autocolor>Sep.2023 ~ May.2025 (expected)<br></autocolor>
-  <autocolor>M.S. of Information Technology<br></autocolor>
-</ul>
-
-<div style="display: flex; align-items: center; margin-bottom: 5px;">
-  <h4 style="margin:0 10px 0;">Guangdong University of Finance & Economics</h4>
-</div>
-<ul style="margin:0 0 5px;">
-  <autocolor>Sep.2019 ~ June.2023<br></autocolor>
-  <autocolor>B.S. of Computer Science<br></autocolor>
-</ul>
 </div>
 
 ## Notes (Chinese)
