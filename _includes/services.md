@@ -1,4 +1,4 @@
-## Awards
+## AWARDS
 
 <h4 style="margin:0 10px 0;">Excellent Graduation Thesis</h4>
 
