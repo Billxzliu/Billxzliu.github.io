@@ -63,7 +63,7 @@ My research mainly focus on Robotics🤖 & Machine Vision👀 applications in in
 <div style="margin-bottom: 15px;">
   <h4 style="margin:0 10px 0;">Automatic Visual Recognition Method and Sorting System</h4>
   <ul style="margin:0 0 5px;">
-    <autocolor><strong>[CN116213306A]</strong> <a href="http://epub.cnipa.gov.cn/patent/CN116213306A">Patent Link</a> </autocolor>
+    <autocolor><a href="http://epub.cnipa.gov.cn/patent/CN116213306A">CN116213306A</a> </autocolor>
   </ul>
 </div>  
 
