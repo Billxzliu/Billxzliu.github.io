@@ -2,17 +2,17 @@
 layout: homepage
 ---
 
-## About Me 
+## ABOUT ME 
 Hello guys😃, welcome to my homepage. I'm Xuanzhi Liu. I'm pursuing my Master's degree in UNSW Sydney, Australia. My research mainly focus on Machine Vision algorithms and their applications in industry. In my spare time, I'm good at cooking🧑‍🍳 and singing pop-music🎵. My MBTI is ESFJ.  
 
-## Research Interests
-My research mainly focus on Robotics🤖 & Machine Vision applications in industry👀, including:
+## RESEARCH INTERESTS
+My research mainly focus on Robotics🤖 & Machine Vision👀 applications in industry, including:
 - Pose Estimation
 - 3D Reconstruction (Point-Cloud)
 - Deep Learning
 - Computer Vision
   
-## Experiences 
+## EXPERIENCES 
 <div style="margin-bottom: 15px;">
 <h4 style="margin:0 10px 0;">Deep Bit Lab, The Chinese University of Hong Kong, Shenzhen</h4>
 <ul style="margin:0 0 5px;">
@@ -39,7 +39,7 @@ My research mainly focus on Robotics🤖 & Machine Vision applications in indust
   </ul>
 </div>
 
-## Education 
+## EDUCATION 
 <div style="margin-bottom: 15px;">
 <h4 style="margin:0 10px 0;">University of New South Wales</h4>
 <ul style="margin:0 0 5px;">
@@ -59,7 +59,7 @@ My research mainly focus on Robotics🤖 & Machine Vision applications in indust
 {% include_relative _includes/publications.md %}
 {% include_relative _includes/projects.md %}
 
-## Patents 
+## PATENTS 
 <div style="margin-bottom: 15px;">
   <h4 style="margin:0 10px 0;">Automatic Visual Recognition Method and Sorting System</h4>
   <ul style="margin:0 0 5px;">
@@ -67,7 +67,7 @@ My research mainly focus on Robotics🤖 & Machine Vision applications in indust
   </ul>
 </div>  
 
-## Awards 
+## AWARDS 
 <div style="margin-bottom: 15px;">
   <h4 style="margin:0 10px 0;">Outstanding Thesis Award</h4>
   <ul style="margin:0 0 5px;">
@@ -75,7 +75,7 @@ My research mainly focus on Robotics🤖 & Machine Vision applications in indust
   </ul>
 </div>
 
-## Notes (Chinese)
+## NOTES (CHINESE)
 [Static Analysis](https://zhuanlan.zhihu.com/p/681560790)  
 [Neuron Network: Forward Propagation](https://blog.csdn.net/debby233/article/details/126364933?spm=1001.2014.3001.5502)  
 [Neuron Network: Backward Propagation](https://blog.csdn.net/debby233/article/details/126426619?spm=1001.2014.3001.5502)  
@@ -85,9 +85,6 @@ My research mainly focus on Robotics🤖 & Machine Vision applications in indust
 [Semantic Segmentation: Progress of implementing a project](https://blog.csdn.net/debby233/article/details/126221264?spm=1001.2014.3001.5502)  
 [Object Detection: Data Augmentation](https://blog.csdn.net/debby233/article/details/126016717?spm=1001.2014.3001.5502)  
 [Object Detection: Make your dataset](https://blog.csdn.net/debby233/article/details/125875361?spm=1001.2014.3001.5502)  
-
-
-
 
 
 
