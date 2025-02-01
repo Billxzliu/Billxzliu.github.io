@@ -240,6 +240,34 @@
           </table>
           <br>
           <hr>
+           <br>
+          <table
+            style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+            <tbody>
+              <tr>
+                <td style="padding:0px;width:15%;text-align: left;">
+                  <!-- Left side: ClustrMaps Globe -->
+                 <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=fDaeVxRGXfuJFI6NMA9k4y6F0t-35gypIcrHk19dYto&cl=ffffff&w=a"></script>
+                </td>
+                <td style="padding:0px;text-align:right;font-size:small;width:25%;">
+                  <br>
+                  <p>
+                    © Xuanzhi Liu. Last update: <span id='lastupdate'></span>.
+                    <script>
+                      function get_update() {
+                        var x = document.lastModified;
+                        document.getElementById("lastupdate").innerHTML = new Date(document.lastModified).toISOString().substr(0, 10);
+                      }
+
+                      get_update()
+                    </script>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </td>
+      </tr>
+  </table>
 </body>
 
 </html>
