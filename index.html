@@ -136,17 +136,11 @@
                   <a href="9900/proposal.pdf">[Proposal]</a>
                   <a href="9900/report.pdf">[Report]</a>
                   <p style="font-size: 12px;">
-                   To support the moderation and management of student comment data, staff are
-             currently tasked with manually checking thousands of student responses. This pro
-            cess includes identifying inappropriate content, classifying feedback, and ensuring
-             that valuable insights are accurately captured. As artificial intelligence (AI) and
-             large-scale language modeling (LLM) technologies evolve, they offer promising op
-            portunities to improve the efficiency and consistency of comment review. AI-powered
-             systems can automatically analyze qualitative feedback, flag potentially sensitive or
-             inappropriate content, categorize reviews into relevant topics, and even generate
-             summary reports or actionable recommendations. By integrating these tools, orga
-            nizations can simplify the review process while maintaining accuracy and reducing
-             the workload of manual moderators.
+                  This project introduces an AI-based comment moderation system that combines Retrieval-Augmented Generation (RAG) and GPT-based classification. 
+                    By retrieving similar historical comments from a local vector database (ChromaDB), the system enhances classification without requiring large labeled datasets. 
+                    It features a modular architecture with FastAPI backend, React frontend, and an AI Agent module for advanced multi-step reasoning. Key functionalities include batch processing, manual review support, 
+                    and transparent classification logic. 
+                    Evaluation results show strong performance (F1 score 87.3%), usability, and reliability. Future improvements target scalability, user customization, and enterprise-level integration.
                   </p>
                 </td>
               </tr>
