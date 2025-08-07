@@ -1,1 +1,2 @@
-Website adapted from the source code of [Jon Barron's academic website](https://jonbarron.info/), with major customizations.
+Website adapted from the source code of [Jon Barron's academic website](https://jonbarron.info/), with major customizations.  
+Feel free to fork this repo if you like it!
