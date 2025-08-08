@@ -6,137 +6,257 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
+    :root{
+      --bg-card: rgba(255,255,255,0.7);
+      --text: #1f2937;
+      --text-muted:#5b6472;
+      --border:#e6e9ee;
+      --link:#2563eb;
+      --link-hover:#1e40af;
+      --shadow: 0 6px 24px rgba(0,0,0,0.08), 0 2px 8px rgba(0,0,0,0.06);
+      --radius: 16px;
+      --space: 20px;
+    }
+    @media (prefers-color-scheme: dark){
+      :root{
+        --bg-card: rgba(20,22,26,0.55);
+        --text:#e5e7eb;
+        --text-muted:#a3aab6;
+        --border:#2a2f37;
+        --link:#8ab4ff;
+        --link-hover:#c1d6ff;
+        --shadow: 0 8px 28px rgba(0,0,0,0.45);
+      }
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
       background: transparent;
-      color: #2c2c2c;
-      line-height: 1.7;
+      color: var(--text);
+      line-height: 1.65;
       position: relative;
       overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
     .background-slider {
       position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
+      inset: 0;
+      z-index: -2;
       overflow: hidden;
     }
-
     .background-slider img {
       position: absolute;
-      top: 0;
-      left: 0;
+      inset: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
       opacity: 0;
-      transition: opacity 1s ease-in-out;
+      transition: opacity 1.2s ease-in-out;
+      filter: saturate(1.05) contrast(1.02);
+      will-change: opacity;
     }
+    .background-slider img.active { opacity: 1; }
 
-    .background-slider img.active {
-      opacity: 1;
+    .background-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        linear-gradient(180deg, rgba(9,12,20,0.35) 0%, rgba(9,12,20,0.15) 30%, rgba(9,12,20,0.35) 100%);
+      backdrop-filter: blur(2px);
+    }
+    @media (prefers-color-scheme: dark){
+      .background-overlay{
+        background:
+          linear-gradient(180deg, rgba(9,12,20,0.6) 0%, rgba(9,12,20,0.45) 30%, rgba(9,12,20,0.65) 100%);
+        backdrop-filter: blur(3px);
+      }
     }
 
     a {
-      color: #0077cc;
+      color: var(--link);
       text-decoration: none;
+      transition: color .2s ease, opacity .2s ease;
     }
-    a:hover {
-      color: #005999;
-      text-decoration: underline;
-    }
+    a:hover { color: var(--link-hover); }
 
     h2 {
+      font-weight: 700;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 8px;
+      margin: 32px 0 18px;
+      letter-spacing: .2px;
+      font-size: clamp(18px, 2vw, 22px);
+    }
+    h3{
       font-weight: 600;
-      color: #333;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
+      margin: 0 0 6px 0;
+      font-size: clamp(15px, 1.6vw, 18px);
     }
 
     .name {
-      font-size: 36px;
+      font-size: clamp(28px, 4.2vw, 40px);
       text-align: center;
-      margin-top: 40px;
-      color: #333;
+      margin-top: 28px;
+      color: var(--text);
+      letter-spacing: .3px;
     }
 
     .container {
-      max-width: 860px;
+      max-width: 900px;
       margin: 0 auto;
-      padding: 40px 20px;
-      background: rgba(255, 255, 255, 0.75);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-      border-radius: 10px;
+      padding: clamp(22px, 4vw, 44px) clamp(14px, 3vw, 28px);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      border-radius: var(--radius);
       position: relative;
       z-index: 1;
+      backdrop-filter: blur(12px);
     }
 
-    .social-icons {
+    .intro {
+      font-size: clamp(14px, 1.4vw, 16px);
+      color: var(--text-muted);
+      margin: 10px 0 0 0;
+    }
+
+    .avatar-wrap{
       text-align: center;
-      margin-top: 20px;
+      margin-bottom: 18px;
+    }
+    .avatar{
+      width: clamp(120px, 18vw, 160px);
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      border: 1px solid var(--border);
+      transition: transform .3s ease;
+    }
+    .avatar:hover{ transform: translateY(-2px); }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      margin: 18px 0 6px;
+      flex-wrap: wrap;
+    }
+    .social-icons a{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 38px; height: 38px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.55);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease, background .2s ease;
+    }
+    @media (prefers-color-scheme: dark){
+      .social-icons a{ background: rgba(20,22,26,0.45); }
+    }
+    .social-icons a:hover{
+      transform: translateY(-2px);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+      border-color: transparent;
     }
     .social-icons img {
-      height: 28px;
-      margin: 0 8px;
-      opacity: 0.8;
-      transition: transform 0.2s ease-in-out, opacity 0.3s;
-    }
-    .social-icons img:hover {
-      transform: scale(1.1);
-      opacity: 1;
+      height: 20px;
+      opacity: .9;
     }
 
     hr {
       border: 0;
-      border-top: 1px solid #e0e0e0;
-      margin: 40px 0;
+      border-top: 1px solid var(--border);
+      margin: 28px 0;
     }
+
+    .meta {
+      margin: 0;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    .row-col{
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+    .row-col+.row-col{ margin-top: 20px; }
+    .row-col img{
+      width: 200px;
+      max-height: 200px;
+      object-fit: contain;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,0.5);
+    }
+    @media (max-width: 720px){
+      .row-col{ flex-direction: column; align-items: flex-start; }
+      .row-col img{ width: 100%; max-height: 160px; }
+    }
+
+    ul { padding-left: 18px; margin: 8px 0 0 0; }
+    li { margin: 6px 0; }
 
     .fade-in-section {
       opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 2s ease-out, transform 2s ease-out;
+      transform: translateY(28px);
+      transition: opacity .9s ease, transform .9s ease;
     }
-
     .fade-in-section.visible {
       opacity: 1;
       transform: none;
+    }
+    @media (prefers-reduced-motion: reduce){
+      .fade-in-section { transition: none; opacity: 1; transform: none; }
+      .background-slider img { transition: none; }
+    }
+
+    .project h3{ margin-top: 0; }
+    .project p{ font-size: 14px; color: var(--text-muted); }
+
+    .footer{
+      font-size: 12px;
+      text-align: right;
+      color: var(--text-muted);
+      margin-top: 16px;
     }
   </style>
 </head>
 <body>
 
-  <!-- 背景轮播图 -->
   <div class="background-slider">
     <img src="images/img2.jpg" class="active">
-<!--     <img src="images/img2.jpg"> -->
-<!--     <img src="images/img3.jpg"> -->
-<!--     <img src="images/img4.jpg"> -->
-<!--     <img src="images/img5.jpg">
-    <img src="images/img6.jpg">
-    <img src="images/img7.jpg"> -->
   </div>
+  <div class="background-overlay"></div>
 
-  <!-- 内容容器 -->
   <div class="container">
-    <div style="text-align: center; margin-bottom: 30px;">
-      <img src="images/xuanzhi.jpg" alt="Xuanzhi Liu" style="width: 160px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+    <div class="avatar-wrap">
+      <img class="avatar" src="images/xuanzhi.jpg" alt="Xuanzhi Liu">
     </div>
+
     <p class="name">Xuanzhi Liu 刘炫志</p>
-    <p>I received my Master's degree in Information Technology from the University of New South Wales (<a href="https://www.unsw.edu.au/">UNSW</a>) in June 2025. During my time at UNSW, I conducted research under the supervision of <a href="http://www.zhengyi.one/">Dr. Zhengyi Yang</a> and <a href="https://www.unsw.edu.au/staff/junbum-kwon">Dr. Junbum Kwon</a>.</p>
-    <p>Earlier, I interned at the <a href="https://english.siat.ac.cn/re/ru/scc/rc/idmv/in/">Research Center for Machine Vision</a> at <a href="https://english.siat.ac.cn/">SIAT, Chinese Academy of Sciences</a>, where I was advised by Prof. <a href="https://people.ucas.ac.cn/~zsong?language=en">Zhan Song</a>.</p>
-    <p>I obtained my B.Eng. degree in Computer Science from Guangdong University of Finance & Economics (<a href="https://www.gdufe.edu.cn/">GDUFE</a>) in 2023.</p>
+    <p class="intro">I received my Master's degree in Information Technology from the University of New South Wales (<a href="https://www.unsw.edu.au/">UNSW</a>) in June 2025. During my time at UNSW, I conducted research under the supervision of <a href="http://www.zhengyi.one/">Dr. Zhengyi Yang</a> and <a href="https://www.unsw.edu.au/staff/junbum-kwon">Dr. Junbum Kwon</a>.</p>
+    <p class="intro">Earlier, I interned at the <a href="https://english.siat.ac.cn/re/ru/scc/rc/idmv/in/">Research Center for Machine Vision</a> at <a href="https://english.siat.ac.cn/">SIAT, Chinese Academy of Sciences</a>, where I was advised by Prof. <a href="https://people.ucas.ac.cn/~zsong?language=en">Zhan Song</a>. I obtained my B.Eng. in Computer Science from Guangdong University of Finance & Economics (<a href="https://www.gdufe.edu.cn/">GDUFE</a>) in 2023.</p>
 
     <div class="social-icons">
-      <a href="mailto:xuanzhibill@gmail.com"><img src="./images/email.png" alt="Email"></a>
-      <a href="https://scholar.google.com/citations?user=cImyOm0AAAAJ&hl=en"><img src="./images/google_scholar.png" alt="Scholar"></a>
-      <a href="https://github.com/Billxzliu"><img src="./images/github.png" alt="GitHub"></a>
-      <a href="https://www.linkedin.com/in/xuanzhi-liu/"><img src="./images/LinkedIn.png" alt="LinkedIn"></a>
-      <a href="https://x.com/liuxuaa"><img src="./images/X_icon.png" alt="X"></a>
+      <a href="mailto:xuanzhibill@gmail.com" aria-label="Email"><img src="./images/email.png" alt=""></a>
+      <a href="https://scholar.google.com/citations?user=cImyOm0AAAAJ&hl=en" aria-label="Google Scholar"><img src="./images/google_scholar.png" alt=""></a>
+      <a href="https://github.com/Billxzliu" aria-label="GitHub"><img src="./images/github.png" alt=""></a>
+      <a href="https://www.linkedin.com/in/xuanzhi-liu/" aria-label="LinkedIn"><img src="./images/LinkedIn.png" alt=""></a>
+      <a href="https://x.com/liuxuaa" aria-label="X"><img src="./images/X_icon.png" alt=""></a>
     </div>
 
     <div class="fade-in-section">
@@ -157,21 +277,21 @@
 
     <div class="fade-in-section">
       <h2>Education</h2>
-      <div style="display: flex; flex-direction: column; gap: 30px;">
-        <div style="display: flex; align-items: center; gap: 20px;">
-          <img src="images/UNSW.png" style="width: 200px; max-height: 200px; object-fit: contain;">
-          <div style="font-size: 13px; padding-left: 10px;">
-            <h3 style="margin: 0; font-size: 16px;">University of New South Wales (UNSW), Australia</h3>
-            <p style="margin: 0; color: #555;">M.IT. in Artificial Intelligence</p>
-            <p style="color: #555;">Sep. 2023 - June 2025</p>
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div class="row-col">
+          <img src="images/UNSW.png" alt="UNSW">
+          <div style="font-size: 14px;">
+            <h3>University of New South Wales (UNSW), Australia</h3>
+            <p class="meta">M.IT. in Artificial Intelligence</p>
+            <p class="meta">Sep. 2023 – June 2025</p>
           </div>
         </div>
-        <div style="display: flex; align-items: center; gap: 20px;">
-          <img src="images/gdufe.jpg" style="width: 200px; max-height: 200px; object-fit: contain;">
-          <div style="font-size: 13px; padding-left: 10px;">
-            <h3 style="margin: 0; font-size: 16px;">Guangdong University of Finance & Economics (GDUFE), China</h3>
-            <p style="margin: 0; color: #555;">B.Eng. in Computer Science and Technology</p>
-            <p style="color: #555;">Sep. 2019 - Jun. 2023</p>
+        <div class="row-col">
+          <img src="images/gdufe.jpg" alt="GDUFE">
+          <div style="font-size: 14px;">
+            <h3>Guangdong University of Finance & Economics (GDUFE), China</h3>
+            <p class="meta">B.Eng. in Computer Science and Technology</p>
+            <p class="meta">Sep. 2019 – Jun. 2023</p>
           </div>
         </div>
       </div>
@@ -179,32 +299,32 @@
 
     <div class="fade-in-section">
       <h2>Experiences</h2>
-      <div style="display: flex; flex-direction: column; gap: 30px;">
-        <div style="display: flex; align-items: center; gap: 20px;">
-          <img src="images/suat.jpg" style="width: 200px; max-height: 200px; object-fit: contain;">
-          <div style="font-size: 13px; padding-left: 10px;">
-            <h3 style="margin: 0; font-size: 16px;">Shenzhen University of Advanced Technology</h3>
-            <p style="margin: 0; color: #555;">Incoming Research Assistant</p>
-            <p style="color: #555;">Aug. 2025</p>
-            <p style="color: #555;">Supervisors: Prof. Ruize Han & Prof. Song Wang</p>
+      <div style="display: flex; flex-direction: column; gap: 24px;">
+        <div class="row-col">
+          <img src="images/suat.jpg" alt="SUAT">
+          <div style="font-size: 14px;">
+            <h3>Shenzhen University of Advanced Technology</h3>
+            <p class="meta">Incoming Research Assistant</p>
+            <p class="meta">Aug. 2025</p>
+            <p class="meta">Supervisors: Prof. Ruize Han & Prof. Song Wang</p>
           </div>
         </div>
-        <div style="display: flex; align-items: center; gap: 20px;">
-          <img src="images/business.jpg" style="width: 200px; max-height: 200px; object-fit: contain;">
-          <div style="font-size: 13px; padding-left: 10px;">
-            <h3 style="margin: 0; font-size: 16px;">UNSW Business School</h3>
-            <p style="margin: 0; color: #555;">Full-Stack Developer</p>
-            <p style="color: #555;">April 2025 - May 2025, 2 months</p>
-            <p style="color: #555;">Supervisor: Dr. Junbum Kwon</p>
+        <div class="row-col">
+          <img src="images/business.jpg" alt="UNSW Business School">
+          <div style="font-size: 14px;">
+            <h3>UNSW Business School</h3>
+            <p class="meta">Full-Stack Developer</p>
+            <p class="meta">April 2025 – May 2025, 2 months</p>
+            <p class="meta">Supervisor: Dr. Junbum Kwon</p>
           </div>
         </div>
-        <div style="display: flex; align-items: center; gap: 20px;">
-          <img src="images/siat.jpg" style="width: 200px; max-height: 200px; object-fit: contain;">
-          <div style="font-size: 13px; padding-left: 10px;">
-            <h3 style="margin: 0; font-size: 16px;">Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences</h3>
-            <p style="margin: 0; color: #555;">Visiting Student</p>
-            <p style="color: #555;">July 2022 - April 2023, 10 months</p>
-            <p style="color: #555;">Supervisor: Prof. Zhan Song</p>
+        <div class="row-col">
+          <img src="images/siat.jpg" alt="SIAT CAS">
+          <div style="font-size: 14px;">
+            <h3>Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences</h3>
+            <p class="meta">Visiting Student</p>
+            <p class="meta">July 2022 – April 2023, 10 months</p>
+            <p class="meta">Supervisor: Prof. Zhan Song</p>
           </div>
         </div>
       </div>
@@ -212,49 +332,45 @@
 
     <div class="fade-in-section">
       <h2>Publications & Projects</h2>
-      <div style="margin-bottom: 20px;">
-        <h3 style="margin-top: 0;">AI Comment Moderation - RAG and Classification Modelling</h3>
-        <p style="margin: 4px 0; font-size: 14px; color: #555;"><strong>High-Distinction Graduation Project</strong></p>
-        <p style="font-size: 14px;">This project introduces an AI-based comment moderation system that combines Retrieval-Augmented Generation (RAG) and GPT-based classification. By retrieving similar historical comments from a local vector database (ChromaDB), the system enhances classification without requiring large labeled datasets. It features a modular architecture with FastAPI backend, React frontend, and an AI Agent module for advanced multi-step reasoning. Evaluation results show strong performance (F1 score 87.3%), usability, and reliability.</p>
+      <div class="project" style="margin-bottom: 18px;">
+        <h3>AI Comment Moderation — RAG and Classification Modelling</h3>
+        <p><strong>High-Distinction Graduation Project</strong></p>
+        <p>This project introduces an AI-based comment moderation system that combines Retrieval-Augmented Generation (RAG) and GPT-based classification. By retrieving similar historical comments from a local vector database (ChromaDB), the system enhances classification without requiring large labeled datasets. It features a modular architecture with FastAPI backend, React frontend, and an AI Agent module for multi-step reasoning. Evaluation results show strong performance (F1 87.3%), usability, and reliability.</p>
         <p><a href="https://github.com/unsw-cse-comp99-3900/capstone-project-2025-t1-25t1-9900-f16a-avocado">[Code]</a></p>
       </div>
-
-      <div style="margin-bottom: 20px;">
-        <h3 style="margin-top: 0;">A Food Package Recognition and Sorting System Based on Structured Light and Deep Learning</h3>
-        <p style="margin: 4px 0; font-size: 14px; color: #555;"><strong>JCRAI 2023 Oral · Outstanding Undergraduate Thesis</strong></p>
-        <p style="font-size: 14px;">We designed a sorting system for food packaging using deep learning and structured light 3D reconstruction. A pre-trained MASK R-CNN model was used to recognize the object class and structured light estimated 3D coordinates for robotic arm guidance.</p>
+      <div class="project" style="margin-bottom: 6px;">
+        <h3>A Food Package Recognition and Sorting System Based on Structured Light and Deep Learning</h3>
+        <p><strong>JCRAI 2023 Oral · Outstanding Undergraduate Thesis</strong></p>
+        <p>We designed a sorting system for food packaging using deep learning and structured-light 3D reconstruction. A pre-trained Mask R-CNN model recognized object classes and structured light estimated 3D coordinates for robotic arm guidance.</p>
         <p><a href="https://billxzliu.github.io/sorting-system/">[Project Page]</a></p>
       </div>
     </div>
 
     <hr>
-    <p style="font-size: small; text-align: right; color: #999">© Xuanzhi Liu. Last update: <span id='lastupdate'></span>.</p>
+    <p class="footer">© Xuanzhi Liu. Last update: <span id="lastupdate"></span>.</p>
     <script>
       document.getElementById("lastupdate").innerText = new Date(document.lastModified).toISOString().substr(0, 10);
     </script>
   </div>
 
-  <!-- JS: Section Animation + 背景轮播 -->
   <script>
-    // 滚动淡入效果
     const sections = document.querySelectorAll('.fade-in-section');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
+        if (entry.isIntersecting) entry.target.classList.add('visible');
       });
-    }, { threshold: 0.1 });
+    }, { threshold: 0.12 });
     sections.forEach(section => observer.observe(section));
 
-    // 背景轮播
     const slides = document.querySelectorAll('.background-slider img');
     let current = 0;
-    setInterval(() => {
-      slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-    }, 5000); // 每 5 秒切换一张
+    if (slides.length > 1){
+      setInterval(() => {
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, 6000);
+    }
   </script>
 </body>
 </html>
