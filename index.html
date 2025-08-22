@@ -6,154 +6,138 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --fg:#2c2c2c;
-      --fg-soft:#555;
-      --border:#e0e0e0;
-      --card-bg:rgba(255,255,255,0.78);
-      --maxw:860px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family:'Inter',sans-serif;
-      background:transparent;
-      color:var(--fg);
-      line-height:1.75;
-      position:relative;
-      overflow-x:hidden;
-      padding-top:env(safe-area-inset-top);
-      padding-left:env(safe-area-inset-left);
-      padding-right:env(safe-area-inset-right);
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background: transparent;
+      color: #2c2c2c;
+      line-height: 1.7;
+      position: relative;
+      overflow-x: hidden;
     }
 
-    .background-slider{
-      position:fixed; inset:0; z-index:-1; overflow:hidden;
-    }
-    .background-slider img{
-      position:absolute; inset:0;
-      width:100%; height:100%;
-      object-fit:cover; object-position:center;
-      opacity:0; transition:opacity 1s ease-in-out;
-      will-change:opacity;
-    }
-    .background-slider img.active{opacity:1}
-
-    a{color:#0077cc; text-decoration:none}
-    a:hover{color:#005999; text-decoration:underline}
-
-    h2{
-      font-weight:600; color:#333;
-      border-bottom:1px solid #ccc; padding-bottom:6px;
-      margin:0 0 16px 0;
-      font-size:clamp(18px,3.8vw,22px);
-    }
-    h3{
-      margin:0 0 6px 0; font-size:clamp(15px,3.4vw,16px);
+    .background-slider {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      overflow: hidden;
     }
 
-    .name{
-      font-size:clamp(28px,5.4vw,36px);
-      text-align:center; margin:28px 0 8px;
-      color:#333; font-weight:700;
+    .background-slider img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
     }
 
-    .container{
-      width:min(92vw, var(--maxw));
-      margin:0 auto;
-      padding:clamp(20px,4vw,40px) clamp(14px,3.5vw,20px);
-      background:var(--card-bg);
-      -webkit-backdrop-filter:saturate(1.2) blur(3px);
-      backdrop-filter:saturate(1.2) blur(3px);
-      box-shadow:0 2px 10px rgba(0,0,0,0.05);
-      border-radius:14px;
-      position:relative; z-index:1;
+    .background-slider img.active {
+      opacity: 1;
     }
 
-    .lead-avatar{
-      width:clamp(110px,28vw,160px);
-      aspect-ratio:1/1; object-fit:cover; border-radius:50%;
-      box-shadow:0 2px 8px rgba(0,0,0,0.10);
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #005999;
+      text-decoration: underline;
     }
 
-    .social-icons{ text-align:center; margin-top:14px; display:flex; gap:8px; justify-content:center; flex-wrap:wrap}
-    .social-icons a{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:10px; border-radius:12px;
-      transition:transform .18s ease, opacity .25s;
-      touch-action:manipulation;
-    }
-    .social-icons img{ height:28px; opacity:.85; display:block }
-    .social-icons a:hover{ transform:scale(1.06) }
-    .social-icons a:hover img{ opacity:1 }
-
-    hr{ border:0; border-top:1px solid var(--border); margin:28px 0 }
-
-    .fade-in-section{ opacity:0; transform:translateY(28px); transition:opacity .8s ease-out, transform .8s ease-out}
-    .fade-in-section.visible{ opacity:1; transform:none }
-
-    /* 信息区块在小屏改为纵向排列，更紧凑的间距 */
-    .row{ display:flex; align-items:center; gap:16px; }
-    .col{ font-size:13px; padding-left:8px }
-    .logo{
-      width:min(42vw,200px);
-      max-height:200px; object-fit:contain;
-    }
-    .stack{ display:flex; flex-direction:column; gap:22px }
-
-    /* 更紧凑的列表 */
-    ul{ padding-left:18px; margin:10px 0 }
-    li{ margin:6px 0 }
-
-    /* 超小屏优化（≤400px） */
-    @media (max-width: 400px){
-      .container{ padding:18px 12px }
-      .row{ gap:12px }
-      .col{ padding-left:4px }
-      .social-icons a{ padding:8px }
+    h2 {
+      font-weight: 600;
+      color: #333;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 5px;
     }
 
-    /* 中等以上屏幕再切回左右布局，并放大留白 */
-    @media (min-width: 640px){
-      .stack{ gap:28px }
-      .row{ gap:20px }
-      hr{ margin:34px 0 }
+    .name {
+      font-size: 36px;
+      text-align: center;
+      margin-top: 40px;
+      color: #333;
     }
 
-    /* 大屏容器宽度与行高微调 */
-    @media (min-width: 1024px){
-      body{ line-height:1.8 }
+    .container {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      background: rgba(255, 255, 255, 0.75);
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      border-radius: 10px;
+      position: relative;
+      z-index: 1;
     }
 
-    /* 动画无障碍：用户偏好减少动效时，去掉过渡与轮播 */
-    @media (prefers-reduced-motion: reduce){
-      .fade-in-section{ transition:none }
-      .background-slider img{ transition:none }
+    .social-icons {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .social-icons img {
+      height: 28px;
+      margin: 0 8px;
+      opacity: 0.8;
+      transition: transform 0.2s ease-in-out, opacity 0.3s;
+    }
+    .social-icons img:hover {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #e0e0e0;
+      margin: 40px 0;
+    }
+
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 2s ease-out, transform 2s ease-out;
+    }
+
+    .fade-in-section.visible {
+      opacity: 1;
+      transform: none;
     }
   </style>
 </head>
 <body>
+
+  <!-- 背景轮播图 -->
   <div class="background-slider">
-    <img src="images/img2.jpg" class="active" alt="" loading="lazy">
-    <!-- 若你启用更多背景图，也建议加 loading="lazy" -->
+    <img src="images/img2.jpg" class="active">
+<!--     <img src="images/img2.jpg"> -->
+<!--     <img src="images/img3.jpg"> -->
+<!--     <img src="images/img4.jpg"> -->
+<!--     <img src="images/img5.jpg">
+    <img src="images/img6.jpg">
+    <img src="images/img7.jpg"> -->
   </div>
 
+  <!-- 内容容器 -->
   <div class="container">
-    <div style="text-align:center; margin-bottom:18px;">
-      <img src="images/xuanzhi.jpg" alt="Xuanzhi Liu" class="lead-avatar" loading="lazy">
+    <div style="text-align: center; margin-bottom: 30px;">
+      <img src="images/xuanzhi.jpg" alt="Xuanzhi Liu" style="width: 160px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
     </div>
     <p class="name">Xuanzhi Liu 刘炫志</p>
-
     <p>I'm currently a Research Assistant at <a href="https://csce.suat-sz.edu.cn/">CSCE, Shenzhen University of Advanced Technology</a>, advised by <a href="https://csce.suat-sz.edu.cn/info/1011/1318.htm">Dr. Ruize Han</a> and <a href="https://csce.suat-sz.edu.cn/info/1009/1263.htm">Prof. Song Wang</a>.</p>
     <p>Prior to that, I received my Master's degree in Information Technology from the University of New South Wales (<a href="https://www.unsw.edu.au/">UNSW</a>) in June 2025. During my time at UNSW, I conducted research under the supervision of <a href="http://www.zhengyi.one/">Dr. Zhengyi Yang</a> and <a href="https://www.unsw.edu.au/staff/junbum-kwon">Dr. Junbum Kwon</a>.</p>
     <p>Earlier, I interned at the <a href="https://english.siat.ac.cn/re/ru/scc/rc/idmv/in/">Research Center for Machine Vision</a> at <a href="https://english.siat.ac.cn/">SIAT, Chinese Academy of Sciences</a>, where I was advised by <a href="https://people.ucas.ac.cn/~zsong?language=en">Prof. Zhan Song</a>.</p>
+<!--     <p>I obtained my B.Eng. degree in Computer Science from Guangdong University of Finance & Economics (<a href="https://www.gdufe.edu.cn/">GDUFE</a>) in 2023.</p> -->
 
     <div class="social-icons">
-      <a href="mailto:xuanzhibill@gmail.com" aria-label="Email"><img src="./images/email.png" alt="Email" loading="lazy"></a>
-      <a href="https://scholar.google.com/citations?user=cImyOm0AAAAJ&hl=en" aria-label="Google Scholar"><img src="./images/google_scholar.png" alt="Scholar" loading="lazy"></a>
-      <a href="https://github.com/Billxzliu" aria-label="GitHub"><img src="./images/github.png" alt="GitHub" loading="lazy"></a>
-      <a href="https://www.linkedin.com/in/xuanzhi-liu/" aria-label="LinkedIn"><img src="./images/LinkedIn.png" alt="LinkedIn" loading="lazy"></a>
-      <a href="https://x.com/liuxuaa" aria-label="X (Twitter)"><img src="./images/X_icon.png" alt="X" loading="lazy"></a>
+      <a href="mailto:xuanzhibill@gmail.com"><img src="./images/email.png" alt="Email"></a>
+      <a href="https://scholar.google.com/citations?user=cImyOm0AAAAJ&hl=en"><img src="./images/google_scholar.png" alt="Scholar"></a>
+      <a href="https://github.com/Billxzliu"><img src="./images/github.png" alt="GitHub"></a>
+      <a href="https://www.linkedin.com/in/xuanzhi-liu/"><img src="./images/LinkedIn.png" alt="LinkedIn"></a>
+      <a href="https://x.com/liuxuaa"><img src="./images/X_icon.png" alt="X"></a>
     </div>
 
     <div class="fade-in-section">
@@ -168,26 +152,28 @@
     <div class="fade-in-section">
       <hr>
       <h2>Research Interests</h2>
-      <ul><li>LLM, Computer Vision, Machine Vision</li></ul>
+      <ul>
+        <li>LLM, Computer Vision, Machine Vision</li>
+      </ul>
     </div>
 
     <div class="fade-in-section">
       <h2>Education</h2>
-      <div class="stack">
-        <div class="row">
-          <img class="logo" src="images/UNSW.png" alt="UNSW" loading="lazy">
-          <div class="col">
-            <h3>University of New South Wales (UNSW), Australia</h3>
-            <p style="margin:0; color:var(--fg-soft);">M.IT. in Artificial Intelligence</p>
-            <p style="margin:0; color:var(--fg-soft);">Sep. 2023 - June 2025</p>
+      <div style="display: flex; flex-direction: column; gap: 30px;">
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <img src="images/UNSW.png" style="width: 200px; max-height: 200px; object-fit: contain;">
+          <div style="font-size: 13px; padding-left: 10px;">
+            <h3 style="margin: 0; font-size: 16px;">University of New South Wales (UNSW), Australia</h3>
+            <p style="margin: 0; color: #555;">M.IT. in Artificial Intelligence</p>
+            <p style="color: #555;">Sep. 2023 - June 2025</p>
           </div>
         </div>
-        <div class="row">
-          <img class="logo" src="images/gdufe.jpg" alt="GDUFE" loading="lazy">
-          <div class="col">
-            <h3>Guangdong University of Finance & Economics (GDUFE), China</h3>
-            <p style="margin:0; color:var(--fg-soft);">B.Eng. in Computer Science and Technology</p>
-            <p style="margin:0; color:var(--fg-soft);">Sep. 2019 - June 2023</p>
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <img src="images/gdufe.jpg" style="width: 200px; max-height: 200px; object-fit: contain;">
+          <div style="font-size: 13px; padding-left: 10px;">
+            <h3 style="margin: 0; font-size: 16px;">Guangdong University of Finance & Economics (GDUFE), China</h3>
+            <p style="margin: 0; color: #555;">B.Eng. in Computer Science and Technology</p>
+            <p style="color: #555;">Sep. 2019 - June 2023</p>
           </div>
         </div>
       </div>
@@ -195,32 +181,32 @@
 
     <div class="fade-in-section">
       <h2>Experiences</h2>
-      <div class="stack">
-        <div class="row">
-          <img class="logo" src="images/suat.jpg" alt="SUAT" loading="lazy">
-          <div class="col">
-            <h3>Shenzhen University of Advanced Technology</h3>
-            <p style="margin:0; color:var(--fg-soft);">Research Assistant</p>
-            <p style="margin:0; color:var(--fg-soft);">Aug. 2025 - Present</p>
-            <p style="margin:0; color:var(--fg-soft);">Supervisors: Prof. Ruize Han &amp; Prof. Song Wang</p>
+      <div style="display: flex; flex-direction: column; gap: 30px;">
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <img src="images/suat.jpg" style="width: 200px; max-height: 200px; object-fit: contain;">
+          <div style="font-size: 13px; padding-left: 10px;">
+            <h3 style="margin: 0; font-size: 16px;">Shenzhen University of Advanced Technology</h3>
+            <p style="margin: 0; color: #555;">Research Assistant</p>
+            <p style="color: #555;">Aug. 2025 - Present</p>
+            <p style="color: #555;">Supervisors: Prof. Ruize Han & Prof. Song Wang</p>
           </div>
         </div>
-        <div class="row">
-          <img class="logo" src="images/business.jpg" alt="UNSW Business School" loading="lazy">
-          <div class="col">
-            <h3>UNSW Business School</h3>
-            <p style="margin:0; color:var(--fg-soft);">Full-Stack Developer</p>
-            <p style="margin:0; color:var(--fg-soft);">April 2025 - May 2025, 2 months</p>
-            <p style="margin:0; color:var(--fg-soft);">Supervisor: Dr. Junbum Kwon</p>
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <img src="images/business.jpg" style="width: 200px; max-height: 200px; object-fit: contain;">
+          <div style="font-size: 13px; padding-left: 10px;">
+            <h3 style="margin: 0; font-size: 16px;">UNSW Business School</h3>
+            <p style="margin: 0; color: #555;">Full-Stack Developer</p>
+            <p style="color: #555;">April 2025 - May 2025, 2 months</p>
+            <p style="color: #555;">Supervisor: Dr. Junbum Kwon</p>
           </div>
         </div>
-        <div class="row">
-          <img class="logo" src="images/siat.jpg" alt="SIAT, CAS" loading="lazy">
-          <div class="col">
-            <h3>Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences</h3>
-            <p style="margin:0; color:var(--fg-soft);">Visiting Student</p>
-            <p style="margin:0; color:var(--fg-soft);">July 2022 - April 2023, 10 months</p>
-            <p style="margin:0; color:var(--fg-soft);">Supervisor: Prof. Zhan Song</p>
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <img src="images/siat.jpg" style="width: 200px; max-height: 200px; object-fit: contain;">
+          <div style="font-size: 13px; padding-left: 10px;">
+            <h3 style="margin: 0; font-size: 16px;">Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences</h3>
+            <p style="margin: 0; color: #555;">Visiting Student</p>
+            <p style="color: #555;">July 2022 - April 2023, 10 months</p>
+            <p style="color: #555;">Supervisor: Prof. Zhan Song</p>
           </div>
         </div>
       </div>
@@ -228,57 +214,49 @@
 
     <div class="fade-in-section">
       <h2>Publications & Projects</h2>
-      <div style="margin-bottom:20px;">
-        <h3 style="margin-top:0;">AI Comment Moderation - RAG and Classification Modelling</h3>
-        <p style="margin:4px 0; font-size:14px; color:var(--fg-soft);"><strong>High-Distinction Graduation Project</strong></p>
-        <p style="font-size:14px;">This project introduces an AI-based comment moderation system that combines Retrieval-Augmented Generation (RAG) and GPT-based classification. By retrieving similar historical comments from a local vector database (ChromaDB), the system enhances classification without requiring large labeled datasets. It features a modular architecture with FastAPI backend, React frontend, and an AI Agent module for advanced multi-step reasoning. Evaluation results show strong performance (F1 score 87.3%), usability, and reliability.</p>
+      <div style="margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">AI Comment Moderation - RAG and Classification Modelling</h3>
+        <p style="margin: 4px 0; font-size: 14px; color: #555;"><strong>High-Distinction Graduation Project</strong></p>
+        <p style="font-size: 14px;">This project introduces an AI-based comment moderation system that combines Retrieval-Augmented Generation (RAG) and GPT-based classification. By retrieving similar historical comments from a local vector database (ChromaDB), the system enhances classification without requiring large labeled datasets. It features a modular architecture with FastAPI backend, React frontend, and an AI Agent module for advanced multi-step reasoning. Evaluation results show strong performance (F1 score 87.3%), usability, and reliability.</p>
         <p><a href="https://github.com/unsw-cse-comp99-3900/capstone-project-2025-t1-25t1-9900-f16a-avocado">[Code]</a></p>
       </div>
 
-      <div style="margin-bottom:20px;">
-        <h3 style="margin-top:0;">A Food Package Recognition and Sorting System Based on Structured Light and Deep Learning</h3>
-        <p style="margin:4px 0; font-size:14px; color:var(--fg-soft);"><strong>JCRAI 2023 Oral · Outstanding Undergraduate Thesis</strong></p>
-        <p style="font-size:14px;">We designed a sorting system for food packaging using deep learning and structured light 3D reconstruction. A pre-trained MASK R-CNN model was used to recognize the object class and structured light estimated 3D coordinates for robotic arm guidance.</p>
+      <div style="margin-bottom: 20px;">
+        <h3 style="margin-top: 0;">A Food Package Recognition and Sorting System Based on Structured Light and Deep Learning</h3>
+        <p style="margin: 4px 0; font-size: 14px; color: #555;"><strong>JCRAI 2023 Oral · Outstanding Undergraduate Thesis</strong></p>
+        <p style="font-size: 14px;">We designed a sorting system for food packaging using deep learning and structured light 3D reconstruction. A pre-trained MASK R-CNN model was used to recognize the object class and structured light estimated 3D coordinates for robotic arm guidance.</p>
         <p><a href="https://billxzliu.github.io/sorting-system/">[Project Page]</a></p>
       </div>
     </div>
 
     <hr>
-    <p style="font-size:12px; text-align:right; color:#999">© Xuanzhi Liu. Last update: <span id="lastupdate"></span>.</p>
+    <p style="font-size: small; text-align: right; color: #999">© Xuanzhi Liu. Last update: <span id='lastupdate'></span>.</p>
     <script>
-      document.getElementById("lastupdate").innerText =
-        new Date(document.lastModified).toISOString().substr(0,10);
+      document.getElementById("lastupdate").innerText = new Date(document.lastModified).toISOString().substr(0, 10);
     </script>
   </div>
 
+  <!-- JS: Section Animation + 背景轮播 -->
   <script>
+    // 滚动淡入效果
     const sections = document.querySelectorAll('.fade-in-section');
-    const observer = new IntersectionObserver((entries)=>{
-      entries.forEach(e=>{ if(e.isIntersecting) e.target.classList.add('visible'); });
-    },{threshold:0.1, rootMargin:'0px 0px -10% 0px'});
-    sections.forEach(s=>observer.observe(s));
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
 
+    // 背景轮播
     const slides = document.querySelectorAll('.background-slider img');
     let current = 0;
-    let timer = null;
-
-    const start = ()=>{
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      if (slides.length <= 1) return;
-      stop();
-      timer = setInterval(()=>{
-        slides[current].classList.remove('active');
-        current = (current+1)%slides.length;
-        slides[current].classList.add('active');
-      }, 5000);
-    };
-    const stop = ()=>{ if(timer){ clearInterval(timer); timer=null; } };
-
-    document.addEventListener('visibilitychange', ()=>{
-      if (document.hidden) stop(); else start();
-    });
-
-    start();
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 5000); // 每 5 秒切换一张
   </script>
 </body>
 </html>
