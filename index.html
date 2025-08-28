@@ -9,36 +9,11 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background: transparent;
+      background: #f4f6f8;
       color: #2c2c2c;
       line-height: 1.7;
       position: relative;
       overflow-x: hidden;
-    }
-
-    .background-slider {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      overflow: hidden;
-    }
-
-    .background-slider img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      opacity: 0;
-      transition: opacity 1s ease-in-out;
-    }
-
-    .background-slider img.active {
-      opacity: 1;
     }
 
     a {
@@ -68,8 +43,8 @@
       max-width: 860px;
       margin: 0 auto;
       padding: 40px 20px;
-      background: rgba(255, 255, 255, 0.75);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      background: #ffffff;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
       border-radius: 10px;
       position: relative;
       z-index: 1;
@@ -110,17 +85,6 @@
 </head>
 <body>
 
-  <!-- 背景轮播图 -->
-<!--   <div class="background-slider">
-    <img src="images/img2.jpg" class="active">
-<!--     <img src="images/img2.jpg"> -->
-<!--     <img src="images/img3.jpg"> -->
-<!--     <img src="images/img4.jpg"> -->
-<!--     <img src="images/img5.jpg">
-    <img src="images/img6.jpg">
-    <img src="images/img7.jpg"> -->
-  </div> -->
-
   <!-- 内容容器 -->
   <div class="container">
     <div style="text-align: center; margin-bottom: 30px;">
@@ -130,7 +94,6 @@
     <p>I'm currently a Research Assistant at <a href="https://csce.suat-sz.edu.cn/">CSCE, Shenzhen University of Advanced Technology</a>, advised by <a href="https://csce.suat-sz.edu.cn/info/1011/1318.htm">Prof. Ruize Han</a> and <a href="https://csce.suat-sz.edu.cn/info/1009/1263.htm">Prof. Song Wang</a>.</p>
     <p>Prior to that, I received my Master's degree in Information Technology from the University of New South Wales (<a href="https://www.unsw.edu.au/">UNSW</a>) in June 2025. During my time at UNSW, I conducted research under the supervision of <a href="http://www.zhengyi.one/">Dr. Zhengyi Yang</a> and <a href="https://www.unsw.edu.au/staff/junbum-kwon">Dr. Junbum Kwon</a>.</p>
     <p>Earlier, I interned at the <a href="https://english.siat.ac.cn/re/ru/scc/rc/idmv/in/">Research Center for Machine Vision</a> at <a href="https://english.siat.ac.cn/">SIAT, Chinese Academy of Sciences</a>, where I was advised by <a href="https://people.ucas.ac.cn/~zsong?language=en">Prof. Zhan Song</a>.</p>
-<!--     <p>I obtained my B.Eng. degree in Computer Science from Guangdong University of Finance & Economics (<a href="https://www.gdufe.edu.cn/">GDUFE</a>) in 2023.</p> -->
 
     <div class="social-icons">
       <a href="mailto:xuanzhibill@gmail.com"><img src="./images/email.png" alt="Email"></a>
@@ -236,7 +199,7 @@
     </script>
   </div>
 
-  <!-- JS: Section Animation + 背景轮播 -->
+  <!-- JS: Section Animation -->
   <script>
     // 滚动淡入效果
     const sections = document.querySelectorAll('.fade-in-section');
@@ -248,15 +211,6 @@
       });
     }, { threshold: 0.1 });
     sections.forEach(section => observer.observe(section));
-
-    // 背景轮播
-    // const slides = document.querySelectorAll('.background-slider img');
-    // let current = 0;
-    // setInterval(() => {
-    //   slides[current].classList.remove('active');
-    //   current = (current + 1) % slides.length;
-    //   slides[current].classList.add('active');
-    // }, 5000); // 每 5 秒切换一张
   </script>
 </body>
 </html>
