@@ -111,7 +111,7 @@
 <body>
 
   <!-- 背景轮播图 -->
-  <div class="background-slider">
+<!--   <div class="background-slider">
     <img src="images/img2.jpg" class="active">
 <!--     <img src="images/img2.jpg"> -->
 <!--     <img src="images/img3.jpg"> -->
@@ -119,7 +119,7 @@
 <!--     <img src="images/img5.jpg">
     <img src="images/img6.jpg">
     <img src="images/img7.jpg"> -->
-  </div>
+  </div> -->
 
   <!-- 内容容器 -->
   <div class="container">
@@ -250,13 +250,13 @@
     sections.forEach(section => observer.observe(section));
 
     // 背景轮播
-    const slides = document.querySelectorAll('.background-slider img');
-    let current = 0;
-    setInterval(() => {
-      slides[current].classList.remove('active');
-      current = (current + 1) % slides.length;
-      slides[current].classList.add('active');
-    }, 5000); // 每 5 秒切换一张
+    // const slides = document.querySelectorAll('.background-slider img');
+    // let current = 0;
+    // setInterval(() => {
+    //   slides[current].classList.remove('active');
+    //   current = (current + 1) % slides.length;
+    //   slides[current].classList.add('active');
+    // }, 5000); // 每 5 秒切换一张
   </script>
 </body>
 </html>
