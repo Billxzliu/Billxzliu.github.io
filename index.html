@@ -4,53 +4,56 @@
   <meta charset="UTF-8">
   <title>Xuanzhi Liu 刘炫志</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #f8f7f4;
-      --card: #ffffff;
-      --text: #2a2a2a;
-      --text-secondary: #6b6b6b;
-      --accent: #3d5a80;
-      --accent-light: #5b82ab;
-      --accent-glow: rgba(61, 90, 128, 0.08);
-      --border: #e8e6e1;
-      --border-light: #f0eeea;
-      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
-      --shadow-md: 0 8px 30px rgba(0,0,0,0.06);
-      --shadow-lg: 0 20px 60px rgba(0,0,0,0.08);
-      --radius: 16px;
-      --radius-sm: 10px;
+      --bg:            #f5f2ed;
+      --bg-warm:       #ede9e1;
+      --card:          #faf8f4;
+      --card-hover:    #ffffff;
+      --text:          #1e1b16;
+      --text-mid:      #4a4640;
+      --text-soft:     #8a8178;
+      --accent:        #5c4a32;
+      --accent-warm:   #8b6c47;
+      --accent-pale:   rgba(92, 74, 50, 0.07);
+      --accent-border: rgba(92, 74, 50, 0.14);
+      --border:        rgba(92, 74, 50, 0.1);
+      --border-strong: rgba(92, 74, 50, 0.18);
+      --shadow-xs:     0 1px 2px rgba(30, 20, 10, 0.04);
+      --shadow-sm:     0 4px 16px rgba(30, 20, 10, 0.06);
+      --shadow-md:     0 12px 40px rgba(30, 20, 10, 0.09);
+      --r:             18px;
+      --r-sm:          10px;
     }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
-    html {
-      scroll-behavior: smooth;
-    }
+    html { scroll-behavior: smooth; }
 
     body {
-      font-family: 'Source Sans 3', sans-serif;
+      font-family: 'DM Sans', sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.75;
-      overflow-x: hidden;
+      line-height: 1.7;
       font-weight: 400;
+      font-size: 15px;
+      overflow-x: hidden;
     }
 
-    /* ───── Grain overlay ───── */
+    /* ── Grain ── */
     body::before {
       content: '';
       position: fixed;
       inset: 0;
       pointer-events: none;
       z-index: 999;
-      opacity: 0.025;
-      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-      background-size: 200px;
+      opacity: 0.035;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 180px;
     }
 
-    /* ───── Ambient gradient blobs ───── */
+    /* ── Warm blobs ── */
     .ambient {
       position: fixed;
       inset: 0;
@@ -58,329 +61,350 @@
       pointer-events: none;
       overflow: hidden;
     }
-    .ambient .blob {
+    .blob {
       position: absolute;
       border-radius: 50%;
-      filter: blur(100px);
+      filter: blur(120px);
+      will-change: transform;
+    }
+    .blob-1 {
+      width: 560px; height: 480px;
+      background: radial-gradient(ellipse, #d9cab5 0%, transparent 68%);
+      top: -15%; left: -12%;
+      opacity: 0.55;
+      animation: b1 28s ease-in-out infinite alternate;
+    }
+    .blob-2 {
+      width: 420px; height: 420px;
+      background: radial-gradient(ellipse, #c9bba6 0%, transparent 70%);
+      bottom: 5%; right: -8%;
+      opacity: 0.45;
+      animation: b2 34s ease-in-out infinite alternate;
+    }
+    .blob-3 {
+      width: 320px; height: 320px;
+      background: radial-gradient(ellipse, #e0d4c2 0%, transparent 70%);
+      top: 45%; left: 38%;
       opacity: 0.35;
-      animation: drift 20s ease-in-out infinite alternate;
-    }
-    .ambient .blob:nth-child(1) {
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, #c9d6e8 0%, transparent 70%);
-      top: -10%; left: -5%;
-    }
-    .ambient .blob:nth-child(2) {
-      width: 400px; height: 400px;
-      background: radial-gradient(circle, #e3d5c3 0%, transparent 70%);
-      bottom: 10%; right: -8%;
-      animation-delay: -7s;
-      animation-duration: 25s;
-    }
-    .ambient .blob:nth-child(3) {
-      width: 300px; height: 300px;
-      background: radial-gradient(circle, #d4dce8 0%, transparent 70%);
-      top: 50%; left: 30%;
-      animation-delay: -13s;
-      animation-duration: 22s;
+      animation: b3 22s ease-in-out infinite alternate;
     }
 
-    @keyframes drift {
-      0% { transform: translate(0, 0) scale(1); }
-      100% { transform: translate(40px, -30px) scale(1.08); }
-    }
+    @keyframes b1 { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(50px,-40px) scale(1.1); } }
+    @keyframes b2 { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(-40px,30px) scale(1.06); } }
+    @keyframes b3 { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(30px,-25px) scale(1.08); } }
 
-    /* ───── Layout ───── */
+    /* ── Layout ── */
     .page {
       position: relative;
       z-index: 1;
-      max-width: 780px;
+      max-width: 800px;
       margin: 0 auto;
-      padding: 60px 24px 80px;
+      padding: 72px 28px 96px;
     }
 
-    /* ───── Hero ───── */
+    /* ── Hero ── */
     .hero {
-      text-align: center;
-      margin-bottom: 56px;
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 52px;
       opacity: 0;
-      transform: translateY(24px);
-      animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+      transform: translateY(28px);
+      animation: fadeUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
     }
 
     .avatar-wrap {
       position: relative;
-      display: inline-block;
-      margin-bottom: 28px;
+      flex-shrink: 0;
     }
-    .avatar-wrap::after {
-      content: '';
+    .avatar-ring {
       position: absolute;
-      inset: -6px;
+      inset: -5px;
       border-radius: 50%;
-      border: 1.5px solid var(--border);
-      animation: pulse-ring 3s ease-in-out infinite;
+      border: 1.5px solid var(--border-strong);
+      animation: ring-pulse 4s ease-in-out infinite;
     }
-    @keyframes pulse-ring {
-      0%, 100% { opacity: 0.4; transform: scale(1); }
-      50% { opacity: 0.1; transform: scale(1.04); }
+    @keyframes ring-pulse {
+      0%, 100% { opacity: 0.5; transform: scale(1); }
+      50% { opacity: 0.15; transform: scale(1.05); }
     }
 
     .avatar {
-      width: 140px;
-      height: 140px;
-      object-fit: cover;
+      width: 130px;
+      height: 130px;
       border-radius: 50%;
+      object-fit: cover;
       box-shadow: var(--shadow-md);
-      transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
     }
-    .avatar:hover {
-      transform: scale(1.04);
-    }
+    .avatar:hover { transform: scale(1.05); }
 
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.4rem;
-      font-weight: 600;
+    .hero-text {}
+    .hero-text h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 2.6rem;
+      font-weight: 400;
+      line-height: 1.1;
       letter-spacing: -0.02em;
       color: var(--text);
       margin-bottom: 6px;
     }
-
-    .hero .subtitle {
-      font-size: 0.95rem;
-      color: var(--text-secondary);
+    .hero-text h1 em {
+      font-style: italic;
+      color: var(--accent-warm);
+    }
+    .hero-text .subtitle {
+      font-size: 0.88rem;
+      color: var(--text-soft);
       font-weight: 300;
-      letter-spacing: 0.01em;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
     }
 
-    /* ───── Bio ───── */
+    /* ── Bio ── */
     .bio {
-      font-size: 0.97rem;
+      font-size: 0.95rem;
       line-height: 1.85;
-      color: var(--text);
+      color: var(--text-mid);
       margin-bottom: 36px;
       opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.45s forwards;
+      transform: translateY(22px);
+      animation: fadeUp 1s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
     }
-    .bio p { margin-bottom: 14px; }
+    .bio p { margin-bottom: 13px; }
+    .bio p:last-child { margin-bottom: 0; }
     .bio a {
       color: var(--accent);
       text-decoration: none;
-      background: linear-gradient(transparent 85%, rgba(61, 90, 128, 0.15) 85%);
-      transition: background 0.3s ease, color 0.3s ease;
+      border-bottom: 1px solid var(--accent-border);
+      transition: border-color 0.25s, color 0.25s;
     }
     .bio a:hover {
-      background: linear-gradient(transparent 70%, rgba(61, 90, 128, 0.2) 70%);
-      color: var(--accent-light);
+      color: var(--accent-warm);
+      border-color: var(--accent-warm);
     }
 
-    /* ───── Social row ───── */
+    /* ── Social ── */
     .social-row {
       display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 56px;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 60px;
       opacity: 0;
       transform: translateY(16px);
-      animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.65s forwards;
+      animation: fadeUp 0.9s cubic-bezier(0.16, 1, 0.3, 1) 0.55s forwards;
     }
     .social-btn {
-      display: flex;
+      display: inline-flex;
       align-items: center;
       gap: 6px;
-      padding: 8px 16px;
+      padding: 7px 15px;
       border-radius: 100px;
       background: var(--card);
-      border: 1px solid var(--border);
-      color: var(--text-secondary);
+      border: 1px solid var(--border-strong);
+      color: var(--text-mid);
       font-size: 0.82rem;
       font-weight: 500;
       text-decoration: none;
-      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
-      box-shadow: var(--shadow-sm);
+      letter-spacing: 0.01em;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: var(--shadow-xs);
     }
     .social-btn:hover {
       transform: translateY(-2px);
-      box-shadow: var(--shadow-md);
+      box-shadow: var(--shadow-sm);
+      background: var(--accent);
       border-color: var(--accent);
-      color: var(--accent);
-      text-decoration: none;
+      color: #fff;
     }
-    .social-btn svg {
-      width: 16px;
-      height: 16px;
-      flex-shrink: 0;
-    }
+    .social-btn svg { width: 14px; height: 14px; flex-shrink: 0; }
 
-    /* ───── Section card ───── */
+    /* ── Section card ── */
     .section-card {
       background: var(--card);
-      border: 1px solid var(--border-light);
-      border-radius: var(--radius);
-      padding: 36px 40px;
-      margin-bottom: 28px;
-      box-shadow: var(--shadow-sm);
-      transition: box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-      /* scroll reveal */
+      border: 1px solid var(--border);
+      border-radius: var(--r);
+      padding: 34px 38px;
+      margin-bottom: 20px;
+      box-shadow: var(--shadow-xs);
       opacity: 0;
-      transform: translateY(32px);
+      transform: translateY(36px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                  transform 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                  box-shadow 0.35s ease,
+                  background 0.35s ease;
     }
     .section-card.visible {
       opacity: 1;
-      transform: none;
-      transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-                  transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
-                  box-shadow 0.4s ease;
+      transform: translateY(0);
     }
     .section-card:hover {
-      box-shadow: var(--shadow-md);
-      transform: translateY(-2px);
-    }
-    .section-card.visible:hover {
-      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+      background: var(--card-hover);
     }
 
     .section-label {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      font-weight: 600;
+      font-family: 'DM Serif Display', serif;
+      font-size: 1.2rem;
+      font-weight: 400;
       color: var(--text);
-      margin-bottom: 24px;
+      margin-bottom: 22px;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 9px;
+      letter-spacing: -0.01em;
     }
     .section-label .icon {
-      width: 22px; height: 22px;
-      color: var(--accent);
-      opacity: 0.7;
+      width: 19px; height: 19px;
+      color: var(--accent-warm);
+      opacity: 0.8;
+      flex-shrink: 0;
     }
 
-    /* ───── News ───── */
+    /* ── News ── */
     .news-item {
       display: flex;
-      gap: 16px;
+      gap: 18px;
       align-items: baseline;
-      padding: 10px 0;
-      border-bottom: 1px solid var(--border-light);
-      font-size: 0.93rem;
+      padding: 11px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
     }
-    .news-item:last-child { border-bottom: none; }
+    .news-item:last-child { border-bottom: none; padding-bottom: 0; }
+    .news-item:first-of-type { padding-top: 0; }
     .news-date {
-      font-weight: 600;
-      font-size: 0.82rem;
-      color: var(--accent);
-      white-space: nowrap;
-      font-variant-numeric: tabular-nums;
-      min-width: 70px;
-    }
-    .news-text { color: var(--text-secondary); }
-
-    /* ───── Research tags ───── */
-    .tag-row {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
-    .tag {
-      padding: 7px 18px;
-      border-radius: 100px;
-      background: var(--accent-glow);
-      color: var(--accent);
-      font-size: 0.85rem;
+      font-size: 0.78rem;
       font-weight: 500;
-      border: 1px solid rgba(61, 90, 128, 0.12);
-      transition: all 0.3s ease;
+      color: var(--accent-warm);
+      white-space: nowrap;
+      min-width: 64px;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0.02em;
+    }
+    .news-text { color: var(--text-mid); line-height: 1.6; }
+
+    /* ── Tags ── */
+    .tag-row { display: flex; flex-wrap: wrap; gap: 8px; }
+    .tag {
+      padding: 6px 16px;
+      border-radius: 100px;
+      background: var(--accent-pale);
+      color: var(--accent);
+      font-size: 0.83rem;
+      font-weight: 500;
+      border: 1px solid var(--accent-border);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      cursor: default;
     }
     .tag:hover {
       background: var(--accent);
-      color: #fff;
+      color: #f5f0e8;
       border-color: var(--accent);
       transform: translateY(-1px);
+      box-shadow: var(--shadow-sm);
     }
 
-    /* ───── Timeline entry ───── */
+    /* ── Timeline ── */
     .timeline-entry {
       display: flex;
-      gap: 22px;
+      gap: 24px;
       align-items: flex-start;
-      padding: 20px 0;
-      border-bottom: 1px solid var(--border-light);
-      transition: background 0.3s ease;
+      padding: 18px 0;
+      border-bottom: 1px solid var(--border);
+      transition: all 0.3s ease;
     }
-    .timeline-entry:last-child { border-bottom: none; }
-    .timeline-entry:hover {
-      background: var(--accent-glow);
-      border-radius: var(--radius-sm);
-      margin: 0 -12px;
-      padding: 20px 12px;
+    .timeline-entry:last-child { border-bottom: none; padding-bottom: 0; }
+    .timeline-entry:first-of-type { padding-top: 0; }
+
+    .logo-box {
+      width: 96px;
+      min-width: 96px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--bg-warm);
+      border-radius: var(--r-sm);
+      border: 1px solid var(--border);
+      flex-shrink: 0;
+      overflow: hidden;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+    }
+    .timeline-entry:hover .logo-box {
+      transform: scale(1.04);
+      box-shadow: var(--shadow-sm);
     }
 
     .timeline-logo {
-      width: 110px;
-      min-width: 110px;
-      height: auto;
-      max-height: 70px;
+      width: 76px;
+      height: 46px;
       object-fit: contain;
-      flex-shrink: 0;
-      transition: transform 0.3s ease;
-    }
-    .timeline-entry:hover .timeline-logo {
-      transform: scale(1.06);
     }
 
+    .timeline-info { flex: 1; min-width: 0; }
     .timeline-info h3 {
-      font-size: 0.97rem;
-      font-weight: 600;
+      font-size: 0.95rem;
+      font-weight: 500;
       color: var(--text);
       margin-bottom: 2px;
-    }
-    .timeline-info p {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      margin: 0;
-      line-height: 1.6;
+      line-height: 1.4;
     }
     .timeline-info .role {
+      font-size: 0.85rem;
       font-weight: 500;
-      color: var(--accent);
+      color: var(--accent-warm);
+      margin-bottom: 2px;
+    }
+    .timeline-info .meta {
+      font-size: 0.82rem;
+      color: var(--text-soft);
+      line-height: 1.55;
     }
 
-    /* ───── Footer ───── */
+    /* ── Divider ── */
+    .divider {
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+      margin: 4px 0 20px;
+      opacity: 0.5;
+    }
+
+    /* ── Footer ── */
     .footer {
       text-align: center;
-      padding-top: 40px;
-      font-size: 0.78rem;
-      color: #bbb;
-      letter-spacing: 0.02em;
+      padding-top: 48px;
+      font-size: 0.76rem;
+      color: var(--text-soft);
+      letter-spacing: 0.03em;
+      opacity: 0.7;
     }
 
-    /* ───── Animations ───── */
+    /* ── Animations ── */
     @keyframes fadeUp {
-      to { opacity: 1; transform: none; }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    /* ───── Responsive ───── */
-    @media (max-width: 640px) {
-      .page { padding: 36px 16px 60px; }
-      .hero h1 { font-size: 1.9rem; }
-      .section-card { padding: 24px 20px; }
-      .social-row { flex-wrap: wrap; }
-      .social-btn { font-size: 0.78rem; padding: 7px 12px; }
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      .page { padding: 40px 16px 64px; }
+      .hero { flex-direction: column; align-items: flex-start; gap: 24px; }
+      .hero-text h1 { font-size: 2rem; }
+      .avatar { width: 100px; height: 100px; }
+      .section-card { padding: 22px 18px; }
+      .logo-box { width: 76px; min-width: 76px; height: 50px; }
+      .timeline-logo { width: 58px; height: 38px; }
       .timeline-entry { gap: 14px; }
-      .timeline-logo { width: 80px; min-width: 80px; max-height: 55px; }
+      .social-row { gap: 6px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Ambient background -->
   <div class="ambient">
-    <div class="blob"></div>
-    <div class="blob"></div>
-    <div class="blob"></div>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
   </div>
 
   <div class="page">
@@ -388,10 +412,13 @@
     <!-- Hero -->
     <div class="hero">
       <div class="avatar-wrap">
+        <div class="avatar-ring"></div>
         <img class="avatar" src="images/xuanzhi.jpg" alt="Xuanzhi Liu">
       </div>
-      <h1>Xuanzhi Liu</h1>
-      <p class="subtitle">刘炫志 · Research Assistant</p>
+      <div class="hero-text">
+        <h1>Xuanzhi <em>Liu</em></h1>
+        <p class="subtitle">刘炫志 &nbsp;·&nbsp; Research Assistant</p>
+      </div>
     </div>
 
     <!-- Bio -->
@@ -446,7 +473,7 @@
     </div>
 
     <!-- Research Interests -->
-    <div class="section-card" data-delay="100">
+    <div class="section-card" data-delay="80">
       <div class="section-label">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         Research Interests
@@ -459,97 +486,105 @@
     </div>
 
     <!-- Education -->
-    <div class="section-card" data-delay="200">
+    <div class="section-card" data-delay="160">
       <div class="section-label">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/></svg>
         Education
       </div>
       <div class="timeline-entry">
-        <img class="timeline-logo" src="images/UNSW.png" alt="UNSW">
+        <div class="logo-box">
+          <img class="timeline-logo" src="images/UNSW.png" alt="UNSW">
+        </div>
         <div class="timeline-info">
           <h3>University of New South Wales (UNSW)</h3>
           <p class="role">M.IT. in Artificial Intelligence</p>
-          <p>Sep 2023 — Jun 2025 · Sydney, Australia</p>
+          <p class="meta">Sep 2023 — Jun 2025 · Sydney, Australia</p>
         </div>
       </div>
       <div class="timeline-entry">
-        <img class="timeline-logo" src="images/gdufe.jpg" alt="GDUFE">
+        <div class="logo-box">
+          <img class="timeline-logo" src="images/gdufe.jpg" alt="GDUFE">
+        </div>
         <div class="timeline-info">
-          <h3>Guangdong University of Finance & Economics (GDUFE)</h3>
+          <h3>Guangdong University of Finance &amp; Economics (GDUFE)</h3>
           <p class="role">B.Eng. in Computer Science and Technology</p>
-          <p>Sep 2019 — Jun 2023 · Guangzhou, China</p>
+          <p class="meta">Sep 2019 — Jun 2023 · Guangzhou, China</p>
         </div>
       </div>
     </div>
 
     <!-- Experience -->
-    <div class="section-card" data-delay="300">
+    <div class="section-card" data-delay="240">
       <div class="section-label">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
         Experience
       </div>
       <div class="timeline-entry">
-        <img class="timeline-logo" src="images/suat.jpg" alt="SUAT">
+        <div class="logo-box">
+          <img class="timeline-logo" src="images/suat.jpg" alt="SUAT">
+        </div>
         <div class="timeline-info">
           <h3>Shenzhen University of Advanced Technology</h3>
           <p class="role">Research Assistant</p>
-          <p>Aug 2025 — Present</p>
-          <p>Supervisors: Prof. Ruize Han & Prof. Song Wang</p>
+          <p class="meta">Aug 2025 — Present</p>
+          <p class="meta">Supervisors: Prof. Ruize Han &amp; Prof. Song Wang</p>
         </div>
       </div>
       <div class="timeline-entry">
-        <img class="timeline-logo" src="images/siat.png" alt="SIAT">
+        <div class="logo-box">
+          <img class="timeline-logo" src="images/siat.png" alt="SIAT">
+        </div>
         <div class="timeline-info">
           <h3>SIAT, Chinese Academy of Sciences</h3>
           <p class="role">Visiting Student</p>
-          <p>Jul 2022 — Apr 2023 · 10 months</p>
-          <p>Supervisor: Prof. Zhan Song</p>
+          <p class="meta">Jul 2022 — Apr 2023 · 10 months</p>
+          <p class="meta">Supervisor: Prof. Zhan Song</p>
         </div>
       </div>
     </div>
 
     <!-- Footer -->
     <div class="footer">
-      © Xuanzhi Liu · Last update: <span id="lastupdate"></span>
+      © Xuanzhi Liu &nbsp;·&nbsp; Last updated: <span id="lastupdate"></span>
     </div>
-  </div>
+
+  </div><!-- .page -->
 
   <script>
-    // Last update date
-    document.getElementById("lastupdate").innerText =
-      new Date(document.lastModified).toISOString().substr(0, 10);
+    // Last update
+    document.getElementById("lastupdate").textContent =
+      new Date(document.lastModified).toISOString().slice(0, 10);
 
-    // Scroll reveal with staggered delays
+    // Scroll reveal — staggered, one-shot
     const cards = document.querySelectorAll('.section-card');
-    const observer = new IntersectionObserver((entries) => {
+    const io = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const delay = entry.target.getAttribute('data-delay') || 0;
-          setTimeout(() => {
-            entry.target.classList.add('visible');
-          }, Number(delay));
-          observer.unobserve(entry.target);
-        }
+        if (!entry.isIntersecting) return;
+        const delay = Number(entry.target.dataset.delay || 0);
+        setTimeout(() => entry.target.classList.add('visible'), delay);
+        io.unobserve(entry.target);
       });
-    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.06, rootMargin: '0px 0px -32px 0px' });
+    cards.forEach(c => io.observe(c));
 
-    cards.forEach(card => observer.observe(card));
-
-    // Smooth parallax on blobs
-    let ticking = false;
+    // Parallax blobs — throttled, GPU-only
+    const blobs = [
+      document.querySelector('.blob-1'),
+      document.querySelector('.blob-2'),
+      document.querySelector('.blob-3'),
+    ];
+    let raf = false;
     window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const y = window.scrollY;
-          const blobs = document.querySelectorAll('.blob');
-          blobs[0].style.transform = `translate(${y * 0.02}px, ${y * -0.03}px)`;
-          blobs[1].style.transform = `translate(${y * -0.015}px, ${y * 0.02}px)`;
-          blobs[2].style.transform = `translate(${y * 0.01}px, ${y * -0.015}px)`;
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
+      if (raf) return;
+      raf = true;
+      requestAnimationFrame(() => {
+        const y = window.scrollY;
+        blobs[0].style.transform = `translate(${y * 0.018}px, ${y * -0.026}px) scale(1)`;
+        blobs[1].style.transform = `translate(${y * -0.013}px, ${y * 0.017}px) scale(1)`;
+        blobs[2].style.transform = `translate(${y * 0.009}px, ${y * -0.012}px) scale(1)`;
+        raf = false;
+      });
+    }, { passive: true });
   </script>
 </body>
 </html>
