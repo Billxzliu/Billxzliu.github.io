@@ -4,215 +4,554 @@
   <meta charset="UTF-8">
   <title>Xuanzhi Liu 刘炫志</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --bg: #f8f7f4;
+      --card: #ffffff;
+      --text: #2a2a2a;
+      --text-secondary: #6b6b6b;
+      --accent: #3d5a80;
+      --accent-light: #5b82ab;
+      --accent-glow: rgba(61, 90, 128, 0.08);
+      --border: #e8e6e1;
+      --border-light: #f0eeea;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.04);
+      --shadow-md: 0 8px 30px rgba(0,0,0,0.06);
+      --shadow-lg: 0 20px 60px rgba(0,0,0,0.08);
+      --radius: 16px;
+      --radius-sm: 10px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: #f4f6f8;
-      color: #2c2c2c;
-      line-height: 1.7;
-      position: relative;
+      font-family: 'Source Sans 3', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.75;
       overflow-x: hidden;
+      font-weight: 400;
     }
 
-    a {
-      color: #0077cc;
-      text-decoration: none;
-    }
-    a:hover {
-      color: #005999;
-      text-decoration: underline;
-    }
-
-    h2 {
-      font-weight: 600;
-      color: #333;
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 5px;
+    /* ───── Grain overlay ───── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 999;
+      opacity: 0.025;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 200px;
     }
 
-    .name {
-      font-size: 36px;
-      text-align: center;
-      margin-top: 40px;
-      color: #333;
+    /* ───── Ambient gradient blobs ───── */
+    .ambient {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .ambient .blob {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.35;
+      animation: drift 20s ease-in-out infinite alternate;
+    }
+    .ambient .blob:nth-child(1) {
+      width: 500px; height: 500px;
+      background: radial-gradient(circle, #c9d6e8 0%, transparent 70%);
+      top: -10%; left: -5%;
+    }
+    .ambient .blob:nth-child(2) {
+      width: 400px; height: 400px;
+      background: radial-gradient(circle, #e3d5c3 0%, transparent 70%);
+      bottom: 10%; right: -8%;
+      animation-delay: -7s;
+      animation-duration: 25s;
+    }
+    .ambient .blob:nth-child(3) {
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, #d4dce8 0%, transparent 70%);
+      top: 50%; left: 30%;
+      animation-delay: -13s;
+      animation-duration: 22s;
     }
 
-    .container {
-      max-width: 860px;
-      margin: 0 auto;
-      padding: 40px 20px;
-      background: #ffffff;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
-      border-radius: 10px;
+    @keyframes drift {
+      0% { transform: translate(0, 0) scale(1); }
+      100% { transform: translate(40px, -30px) scale(1.08); }
+    }
+
+    /* ───── Layout ───── */
+    .page {
       position: relative;
       z-index: 1;
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 60px 24px 80px;
     }
 
-    .social-icons {
+    /* ───── Hero ───── */
+    .hero {
       text-align: center;
-      margin-top: 20px;
-    }
-    .social-icons img {
-      height: 28px;
-      margin: 0 8px;
-      opacity: 0.8;
-      transition: transform 0.2s ease-in-out, opacity 0.3s;
-    }
-    .social-icons img:hover {
-      transform: scale(1.1);
-      opacity: 1;
-    }
-
-    hr {
-      border: 0;
-      border-top: 1px solid #e0e0e0;
-      margin: 40px 0;
-    }
-
-    .fade-in-section {
+      margin-bottom: 56px;
       opacity: 0;
-      transform: translateY(40px);
-      transition: opacity 2s ease-out, transform 2s ease-out;
+      transform: translateY(24px);
+      animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
     }
 
-    .fade-in-section.visible {
+    .avatar-wrap {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 28px;
+    }
+    .avatar-wrap::after {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 1.5px solid var(--border);
+      animation: pulse-ring 3s ease-in-out infinite;
+    }
+    @keyframes pulse-ring {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 0.1; transform: scale(1.04); }
+    }
+
+    .avatar {
+      width: 140px;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 50%;
+      box-shadow: var(--shadow-md);
+      transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .avatar:hover {
+      transform: scale(1.04);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      color: var(--text);
+      margin-bottom: 6px;
+    }
+
+    .hero .subtitle {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      font-weight: 300;
+      letter-spacing: 0.01em;
+    }
+
+    /* ───── Bio ───── */
+    .bio {
+      font-size: 0.97rem;
+      line-height: 1.85;
+      color: var(--text);
+      margin-bottom: 36px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s cubic-bezier(0.22, 1, 0.36, 1) 0.45s forwards;
+    }
+    .bio p { margin-bottom: 14px; }
+    .bio a {
+      color: var(--accent);
+      text-decoration: none;
+      background: linear-gradient(transparent 85%, rgba(61, 90, 128, 0.15) 85%);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    .bio a:hover {
+      background: linear-gradient(transparent 70%, rgba(61, 90, 128, 0.2) 70%);
+      color: var(--accent-light);
+    }
+
+    /* ───── Social row ───── */
+    .social-row {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 56px;
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.65s forwards;
+    }
+    .social-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 100px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      color: var(--text-secondary);
+      font-size: 0.82rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+      box-shadow: var(--shadow-sm);
+    }
+    .social-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent);
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .social-btn svg {
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+    }
+
+    /* ───── Section card ───── */
+    .section-card {
+      background: var(--card);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius);
+      padding: 36px 40px;
+      margin-bottom: 28px;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow 0.4s ease, transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+      /* scroll reveal */
+      opacity: 0;
+      transform: translateY(32px);
+    }
+    .section-card.visible {
       opacity: 1;
       transform: none;
+      transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+                  transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+                  box-shadow 0.4s ease;
+    }
+    .section-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-2px);
+    }
+    .section-card.visible:hover {
+      transform: translateY(-2px);
+    }
+
+    .section-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .section-label .icon {
+      width: 22px; height: 22px;
+      color: var(--accent);
+      opacity: 0.7;
+    }
+
+    /* ───── News ───── */
+    .news-item {
+      display: flex;
+      gap: 16px;
+      align-items: baseline;
+      padding: 10px 0;
+      border-bottom: 1px solid var(--border-light);
+      font-size: 0.93rem;
+    }
+    .news-item:last-child { border-bottom: none; }
+    .news-date {
+      font-weight: 600;
+      font-size: 0.82rem;
+      color: var(--accent);
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+      min-width: 70px;
+    }
+    .news-text { color: var(--text-secondary); }
+
+    /* ───── Research tags ───── */
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .tag {
+      padding: 7px 18px;
+      border-radius: 100px;
+      background: var(--accent-glow);
+      color: var(--accent);
+      font-size: 0.85rem;
+      font-weight: 500;
+      border: 1px solid rgba(61, 90, 128, 0.12);
+      transition: all 0.3s ease;
+    }
+    .tag:hover {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+      transform: translateY(-1px);
+    }
+
+    /* ───── Timeline entry ───── */
+    .timeline-entry {
+      display: flex;
+      gap: 22px;
+      align-items: flex-start;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--border-light);
+      transition: background 0.3s ease;
+    }
+    .timeline-entry:last-child { border-bottom: none; }
+    .timeline-entry:hover {
+      background: var(--accent-glow);
+      border-radius: var(--radius-sm);
+      margin: 0 -12px;
+      padding: 20px 12px;
+    }
+
+    .timeline-logo {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      border-radius: var(--radius-sm);
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 6px;
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+    .timeline-entry:hover .timeline-logo {
+      transform: scale(1.06);
+    }
+
+    .timeline-info h3 {
+      font-size: 0.97rem;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 2px;
+    }
+    .timeline-info p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.6;
+    }
+    .timeline-info .role {
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    /* ───── Footer ───── */
+    .footer {
+      text-align: center;
+      padding-top: 40px;
+      font-size: 0.78rem;
+      color: #bbb;
+      letter-spacing: 0.02em;
+    }
+
+    /* ───── Animations ───── */
+    @keyframes fadeUp {
+      to { opacity: 1; transform: none; }
+    }
+
+    /* ───── Responsive ───── */
+    @media (max-width: 640px) {
+      .page { padding: 36px 16px 60px; }
+      .hero h1 { font-size: 1.9rem; }
+      .section-card { padding: 24px 20px; }
+      .social-row { flex-wrap: wrap; }
+      .social-btn { font-size: 0.78rem; padding: 7px 12px; }
+      .timeline-entry { gap: 14px; }
+      .timeline-logo { width: 44px; height: 44px; }
     }
   </style>
 </head>
 <body>
 
-  <!-- 内容容器 -->
-  <div class="container">
-    <div style="text-align: center; margin-bottom: 30px;">
-      <img src="images/xuanzhi.jpg" alt="Xuanzhi Liu" style="width: 160px; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-    </div>
-    <p class="name">Xuanzhi Liu 刘炫志</p>
-    <p>I'm currently a Research Assistant at <a href="https://csce.suat-sz.edu.cn/">CSCE, Shenzhen University of Advanced Technology</a>, advised by <a href="https://csce.suat-sz.edu.cn/info/1011/1318.htm">Prof. Ruize Han</a> and <a href="https://csce.suat-sz.edu.cn/info/1009/1263.htm">Prof. Song Wang</a>.</p>
-    <p>Prior to that, I received my Master's degree in Information Technology from the University of New South Wales (<a href="https://www.unsw.edu.au/">UNSW</a>) in June 2025. During my time at UNSW, I conducted research under the supervision of <a href="http://www.zhengyi.one/">Dr. Zhengyi Yang</a> and <a href="https://www.unsw.edu.au/staff/junbum-kwon">Dr. Junbum Kwon</a>.</p>
-    <p>Earlier, I interned at the <a href="https://english.siat.ac.cn/re/ru/scc/rc/idmv/in/">Research Center for Machine Vision</a> at <a href="https://english.siat.ac.cn/">SIAT, Chinese Academy of Sciences</a>, where I was advised by <a href="https://people.ucas.ac.cn/~zsong?language=en">Prof. Zhan Song</a>.</p>
-
-    <div class="social-icons">
-      <a href="./images/resume.pdf"><img src="./images/cv.png" alt="CV"></a>
-      <a href="mailto:xuanzhibill@gmail.com"><img src="./images/email.png" alt="Email"></a>
-      <a href="https://scholar.google.com/citations?user=cImyOm0AAAAJ&hl=en"><img src="./images/google_scholar.png" alt="Scholar"></a>
-      <a href="https://github.com/Billxzliu"><img src="./images/github.png" alt="GitHub"></a>
-      <a href="https://www.linkedin.com/in/xuanzhi-liu/"><img src="./images/LinkedIn.png" alt="LinkedIn"></a>
-      <a href="https://x.com/liuxuaa"><img src="./images/X_icon.png" alt="X"></a>
-    </div>
-
-    <div class="fade-in-section">
-      <hr>
-      <h2>Recent News</h2>
-      <ul>
-        <li><strong>[2025/8]</strong> I start my new position @SUAT as a Research Assistant</li>
-        <li><strong>[2025/6]</strong> I obtain my Master's Degree in Information Technology from UNSW 🎉🎉</li>
-      </ul>
-    </div>
-
-    <div class="fade-in-section">
-      <hr>
-      <h2>Research Interests</h2>
-      <ul>
-        <li>3D Vision, VLM, Machine Vision</li>
-      </ul>
-    </div>
-
-    <div class="fade-in-section">
-      <h2>Education</h2>
-      <div style="display: flex; flex-direction: column; gap: 30px;">
-        <div style="display: flex; align-items: center; gap: 20px;">
-          <img src="images/UNSW.png" style="width: 200px; max-height: 200px; object-fit: contain;">
-          <div style="font-size: 13px; padding-left: 10px;">
-            <h3 style="margin: 0; font-size: 16px;">University of New South Wales (UNSW), Australia</h3>
-            <p style="margin: 0; color: #555;">M.IT. in Artificial Intelligence</p>
-            <p style="color: #555;">Sep. 2023 - June 2025</p>
-          </div>
-        </div>
-        <div style="display: flex; align-items: center; gap: 20px;">
-          <img src="images/gdufe.jpg" style="width: 200px; max-height: 200px; object-fit: contain;">
-          <div style="font-size: 13px; padding-left: 10px;">
-            <h3 style="margin: 0; font-size: 16px;">Guangdong University of Finance & Economics (GDUFE), China</h3>
-            <p style="margin: 0; color: #555;">B.Eng. in Computer Science and Technology</p>
-            <p style="color: #555;">Sep. 2019 - June 2023</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="fade-in-section">
-      <h2>Experiences</h2>
-      <div style="display: flex; flex-direction: column; gap: 30px;">
-        <div style="display: flex; align-items: center; gap: 20px;">
-          <img src="images/suat.jpg" style="width: 200px; max-height: 200px; object-fit: contain;">
-          <div style="font-size: 13px; padding-left: 10px;">
-            <h3 style="margin: 0; font-size: 16px;">Shenzhen University of Advanced Technology</h3>
-            <p style="margin: 0; color: #555;">Research Assistant</p>
-            <p style="color: #555;">Aug. 2025 - Present</p>
-            <p style="color: #555;">Supervisors: Prof. Ruize Han & Prof. Song Wang</p>
-          </div>
-        </div>
-        <!-- <div style="display: flex; align-items: center; gap: 20px;">
-          <img src="images/business.jpg" style="width: 200px; max-height: 200px; object-fit: contain;">
-          <div style="font-size: 13px; padding-left: 10px;">
-            <h3 style="margin: 0; font-size: 16px;">UNSW Business School</h3>
-            <p style="margin: 0; color: #555;">Full-Stack Developer</p>
-            <p style="color: #555;">April 2025 - May 2025, 2 months</p>
-            <p style="color: #555;">Supervisor: Dr. Junbum Kwon</p>
-          </div>
-        </div> -->
-        <div style="display: flex; align-items: center; gap: 20px;">
-          <img src="images/siat.png" style="width: 200px; max-height: 200px; object-fit: contain;">
-          <div style="font-size: 13px; padding-left: 10px;">
-            <h3 style="margin: 0; font-size: 16px;">Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences</h3>
-            <p style="margin: 0; color: #555;">Visiting Student</p>
-            <p style="color: #555;">July 2022 - April 2023, 10 months</p>
-            <!-- <p style="color: #555;">Dec 2024 - Feb 2025, 3 months</p> -->
-            <p style="color: #555;">Supervisor: Prof. Zhan Song</p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="fade-in-section">
-      <h2>Publications & Projects</h2>
-      <div style="margin-bottom: 20px;">
-        <h3 style="margin-top: 0;">AI Comment Moderation - RAG and Classification Modelling</h3>
-        <p style="margin: 4px 0; font-size: 14px; color: #555;"><strong>High-Distinction Graduation Project</strong></p>
-        <p style="font-size: 14px;">This project introduces an AI-based comment moderation system that combines Retrieval-Augmented Generation (RAG) and GPT-based classification. By retrieving similar historical comments from a local vector database (ChromaDB), the system enhances classification without requiring large labeled datasets. It features a modular architecture with FastAPI backend, React frontend, and an AI Agent module for advanced multi-step reasoning. Evaluation results show strong performance (F1 score 87.3%), usability, and reliability.</p>
-        <p><a href="https://github.com/unsw-cse-comp99-3900/capstone-project-2025-t1-25t1-9900-f16a-avocado">[Code]</a></p>
-      </div>
-
-      <div style="margin-bottom: 20px;">
-        <h3 style="margin-top: 0;">A Food Package Recognition and Sorting System Based on Structured Light and Deep Learning</h3>
-        <p style="margin: 4px 0; font-size: 14px; color: #555;"><strong>JCRAI 2023 Oral · Outstanding Undergraduate Thesis · Patent</strong></p>
-        <p style="font-size: 14px;">We designed a sorting system for food packaging using deep learning and structured light 3D reconstruction. A pre-trained MASK R-CNN model was used to recognize the object class and structured light estimated 3D coordinates for robotic arm guidance.</p>
-        <p><a href="https://billxzliu.github.io/sorting-system/">[Project Page]</a></p>
-      </div>
-    </div>
-
-    <hr>
-    <p style="font-size: small; text-align: right; color: #999">© Xuanzhi Liu. Last update: <span id='lastupdate'></span>.</p>
-    <script>
-      document.getElementById("lastupdate").innerText = new Date(document.lastModified).toISOString().substr(0, 10);
-    </script>
+  <!-- Ambient background -->
+  <div class="ambient">
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
   </div>
 
-  <!-- JS: Section Animation -->
+  <div class="page">
+
+    <!-- Hero -->
+    <div class="hero">
+      <div class="avatar-wrap">
+        <img class="avatar" src="images/xuanzhi.jpg" alt="Xuanzhi Liu">
+      </div>
+      <h1>Xuanzhi Liu</h1>
+      <p class="subtitle">刘炫志 · Research Assistant</p>
+    </div>
+
+    <!-- Bio -->
+    <div class="bio">
+      <p>I'm currently a Research Assistant at <a href="https://csce.suat-sz.edu.cn/">CSCE, Shenzhen University of Advanced Technology</a>, advised by <a href="https://csce.suat-sz.edu.cn/info/1011/1318.htm">Prof. Ruize Han</a> and <a href="https://csce.suat-sz.edu.cn/info/1009/1263.htm">Prof. Song Wang</a>.</p>
+      <p>Prior to that, I received my Master's degree in Information Technology from the <a href="https://www.unsw.edu.au/">University of New South Wales</a> in June 2025, where I conducted research under <a href="http://www.zhengyi.one/">Dr. Zhengyi Yang</a> and <a href="https://www.unsw.edu.au/staff/junbum-kwon">Dr. Junbum Kwon</a>.</p>
+      <p>Earlier, I interned at the <a href="https://english.siat.ac.cn/re/ru/scc/rc/idmv/in/">Research Center for Machine Vision</a> at <a href="https://english.siat.ac.cn/">SIAT, Chinese Academy of Sciences</a>, advised by <a href="https://people.ucas.ac.cn/~zsong?language=en">Prof. Zhan Song</a>.</p>
+    </div>
+
+    <!-- Social -->
+    <div class="social-row">
+      <a class="social-btn" href="./images/resume.pdf">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        CV
+      </a>
+      <a class="social-btn" href="mailto:xuanzhibill@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        Email
+      </a>
+      <a class="social-btn" href="https://scholar.google.com/citations?user=cImyOm0AAAAJ&hl=en">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 24a7 7 0 1 1 0-14 7 7 0 0 1 0 14zm0-2a5 5 0 1 0 0-10 5 5 0 0 0 0 10z"/><path d="M0 11.5l12-8 12 8-1.5 1-10.5-7-10.5 7z"/></svg>
+        Scholar
+      </a>
+      <a class="social-btn" href="https://github.com/Billxzliu">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+        GitHub
+      </a>
+      <a class="social-btn" href="https://www.linkedin.com/in/xuanzhi-liu/">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+      <a class="social-btn" href="https://x.com/liuxuaa">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        X
+      </a>
+    </div>
+
+    <!-- News -->
+    <div class="section-card" data-delay="0">
+      <div class="section-label">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        Recent News
+      </div>
+      <div class="news-item">
+        <span class="news-date">2025.08</span>
+        <span class="news-text">Started my new position at SUAT as a Research Assistant</span>
+      </div>
+      <div class="news-item">
+        <span class="news-date">2025.06</span>
+        <span class="news-text">Obtained my Master's Degree in Information Technology from UNSW 🎉</span>
+      </div>
+    </div>
+
+    <!-- Research Interests -->
+    <div class="section-card" data-delay="100">
+      <div class="section-label">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        Research Interests
+      </div>
+      <div class="tag-row">
+        <span class="tag">3D Vision</span>
+        <span class="tag">VLM</span>
+        <span class="tag">Machine Vision</span>
+      </div>
+    </div>
+
+    <!-- Education -->
+    <div class="section-card" data-delay="200">
+      <div class="section-label">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/></svg>
+        Education
+      </div>
+      <div class="timeline-entry">
+        <img class="timeline-logo" src="images/UNSW.png" alt="UNSW">
+        <div class="timeline-info">
+          <h3>University of New South Wales (UNSW)</h3>
+          <p class="role">M.IT. in Artificial Intelligence</p>
+          <p>Sep 2023 — Jun 2025 · Sydney, Australia</p>
+        </div>
+      </div>
+      <div class="timeline-entry">
+        <img class="timeline-logo" src="images/gdufe.jpg" alt="GDUFE">
+        <div class="timeline-info">
+          <h3>Guangdong University of Finance & Economics (GDUFE)</h3>
+          <p class="role">B.Eng. in Computer Science and Technology</p>
+          <p>Sep 2019 — Jun 2023 · Guangzhou, China</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Experience -->
+    <div class="section-card" data-delay="300">
+      <div class="section-label">
+        <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        Experience
+      </div>
+      <div class="timeline-entry">
+        <img class="timeline-logo" src="images/suat.jpg" alt="SUAT">
+        <div class="timeline-info">
+          <h3>Shenzhen University of Advanced Technology</h3>
+          <p class="role">Research Assistant</p>
+          <p>Aug 2025 — Present</p>
+          <p>Supervisors: Prof. Ruize Han & Prof. Song Wang</p>
+        </div>
+      </div>
+      <div class="timeline-entry">
+        <img class="timeline-logo" src="images/siat.png" alt="SIAT">
+        <div class="timeline-info">
+          <h3>SIAT, Chinese Academy of Sciences</h3>
+          <p class="role">Visiting Student</p>
+          <p>Jul 2022 — Apr 2023 · 10 months</p>
+          <p>Supervisor: Prof. Zhan Song</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+      © Xuanzhi Liu · Last update: <span id="lastupdate"></span>
+    </div>
+  </div>
+
   <script>
-    // 滚动淡入效果
-    const sections = document.querySelectorAll('.fade-in-section');
+    // Last update date
+    document.getElementById("lastupdate").innerText =
+      new Date(document.lastModified).toISOString().substr(0, 10);
+
+    // Scroll reveal with staggered delays
+    const cards = document.querySelectorAll('.section-card');
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+          const delay = entry.target.getAttribute('data-delay') || 0;
+          setTimeout(() => {
+            entry.target.classList.add('visible');
+          }, Number(delay));
+          observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.1 });
-    sections.forEach(section => observer.observe(section));
+    }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+    cards.forEach(card => observer.observe(card));
+
+    // Smooth parallax on blobs
+    let ticking = false;
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        requestAnimationFrame(() => {
+          const y = window.scrollY;
+          const blobs = document.querySelectorAll('.blob');
+          blobs[0].style.transform = `translate(${y * 0.02}px, ${y * -0.03}px)`;
+          blobs[1].style.transform = `translate(${y * -0.015}px, ${y * 0.02}px)`;
+          blobs[2].style.transform = `translate(${y * 0.01}px, ${y * -0.015}px)`;
+          ticking = false;
+        });
+        ticking = true;
+      }
+    });
   </script>
 </body>
 </html>
