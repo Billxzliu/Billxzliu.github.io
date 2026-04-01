@@ -22,27 +22,44 @@
       --shadow-xs: 0 1px 2px rgba(30,20,10,0.04);
       --shadow-sm: 0 4px 16px rgba(30,20,10,0.06);
       --shadow-md: 0 12px 40px rgba(30,20,10,0.09);
-      --blob-1: #d9cab5; --blob-2: #c9bba6; --blob-3: #e0d4c2;
-      --r: 18px; --r-sm: 10px;
+      --blob-1: #d9cab5;
+      --blob-2: #c9bba6;
+      --blob-3: #e0d4c2;
+      --r: 18px;
+      --r-sm: 10px;
     }
     @media (prefers-color-scheme: dark) {
       :root {
-        --bg:            #18150f;
-        --card:          #201c14;
-        --card-hover:    #262118;
-        --text:          #f0ead8;
-        --text-mid:      #c2b89a;
-        --text-soft:     #7a7060;
-        --accent:        #c8a97a;
-        --accent-warm:   #d4b88a;
-        --accent-pale:   rgba(200,169,122,0.08);
-        --accent-border: rgba(200,169,122,0.18);
-        --border:        rgba(200,169,122,0.08);
-        --border-strong: rgba(200,169,122,0.16);
-        --shadow-xs: 0 1px 2px rgba(0,0,0,0.3);
-        --shadow-sm: 0 4px 16px rgba(0,0,0,0.25);
-        --shadow-md: 0 12px 40px rgba(0,0,0,0.35);
-        --blob-1: #3a2e1e; --blob-2: #2e2518; --blob-3: #332a1a;
+        color-scheme: dark;
+        --bg:            #0f1316;
+        --card:          rgba(24, 29, 33, 0.84);
+        --card-hover:    rgba(31, 37, 42, 0.92);
+        --text:          #f3ede3;
+        --text-mid:      #d0c6b8;
+        --text-soft:     #9f9689;
+        --accent:        #d6b07c;
+        --accent-warm:   #e7c693;
+        --accent-pale:   rgba(214, 176, 124, 0.11);
+        --accent-border: rgba(214, 176, 124, 0.22);
+        --border:        rgba(255, 248, 235, 0.08);
+        --border-strong: rgba(255, 248, 235, 0.14);
+        --shadow-xs: 0 1px 2px rgba(0,0,0,0.28);
+        --shadow-sm: 0 10px 28px rgba(0,0,0,0.26);
+        --shadow-md: 0 24px 64px rgba(0,0,0,0.36);
+        --blob-1: rgba(84, 112, 122, 0.42);
+        --blob-2: rgba(179, 136, 84, 0.26);
+        --blob-3: rgba(92, 121, 103, 0.24);
+      }
+
+      body {
+        background:
+          radial-gradient(circle at top left, rgba(103, 131, 138, 0.14), transparent 34%),
+          radial-gradient(circle at 86% 18%, rgba(201, 157, 100, 0.08), transparent 28%),
+          linear-gradient(180deg, #11161a 0%, #0f1316 100%);
+      }
+
+      body::before {
+        opacity: 0.02;
       }
     }
 
@@ -50,11 +67,19 @@
     html { scroll-behavior: smooth; }
     body {
       font-family: 'DM Sans', sans-serif;
-      background: var(--bg); color: var(--text);
-      line-height: 1.7; font-size: 15px; overflow-x: hidden;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 15px;
+      overflow-x: hidden;
     }
     body::before {
-      content:''; position:fixed; inset:0; pointer-events:none; z-index:999; opacity:0.035;
+      content:'';
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      z-index:999;
+      opacity:0.035;
       background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
       background-size:180px;
     }
@@ -71,7 +96,6 @@
 
     .page { position:relative; z-index:1; max-width:800px; margin:0 auto; padding:72px 28px 96px; }
 
-    /* Hero */
     .hero { display:flex; align-items:center; gap:40px; margin-bottom:52px; animation:fadeUp 1s cubic-bezier(0.16,1,0.3,1) 0.1s both; }
     .avatar-wrap { position:relative; flex-shrink:0; }
     .avatar-ring { position:absolute; inset:-5px; border-radius:30px; border:1.5px solid var(--border-strong); animation:ring-pulse 4s ease-in-out infinite; }
@@ -82,44 +106,38 @@
     .hero-text h1 em { font-style:italic; color:var(--accent-warm); }
     .hero-text .subtitle { font-size:0.88rem; color:var(--text-soft); font-weight:300; letter-spacing:0.06em; text-transform:uppercase; }
 
-    /* Bio */
     .bio { font-size:0.95rem; line-height:1.85; color:var(--text-mid); margin-bottom:36px; animation:fadeUp 1s cubic-bezier(0.16,1,0.3,1) 0.3s both; }
     .bio p { margin-bottom:13px; }
     .bio p:last-child { margin-bottom:0; }
     .bio a { color:var(--accent); text-decoration:none; border-bottom:1px solid var(--accent-border); transition:border-color 0.25s,color 0.25s; }
     .bio a:hover { color:var(--accent-warm); border-color:var(--accent-warm); }
 
-    /* Social */
     .social-row { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:60px; animation:fadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.5s both; }
-    .social-btn { display:inline-flex; align-items:center; gap:6px; padding:7px 15px; border-radius:100px; background:var(--card); border:1px solid var(--border-strong); color:var(--text-mid); font-size:0.82rem; font-weight:500; text-decoration:none; transition:all 0.3s cubic-bezier(0.16,1,0.3,1); box-shadow:var(--shadow-xs); }
+    .social-btn { display:inline-flex; align-items:center; gap:6px; padding:7px 15px; border-radius:100px; background:var(--card); border:1px solid var(--border-strong); color:var(--text-mid); font-size:0.82rem; font-weight:500; text-decoration:none; transition:all 0.3s cubic-bezier(0.16,1,0.3,1); box-shadow:var(--shadow-xs); backdrop-filter: blur(12px); }
     .social-btn:hover { transform:translateY(-2px); box-shadow:var(--shadow-sm); background:var(--accent); border-color:var(--accent); color:var(--bg); }
     .social-btn svg { width:14px; height:14px; flex-shrink:0; }
 
-    /* Section card — CSS animation, no JS needed */
-    .section-card { background:var(--card); border:1px solid var(--border); border-radius:var(--r); padding:34px 38px; margin-bottom:20px; box-shadow:var(--shadow-xs); animation:fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) both; transition:box-shadow 0.35s ease,background 0.35s ease; }
+    .section-card { background:var(--card); border:1px solid var(--border); border-radius:var(--r); padding:34px 38px; margin-bottom:20px; box-shadow:var(--shadow-xs); animation:fadeUp 0.8s cubic-bezier(0.16,1,0.3,1) both; transition:box-shadow 0.35s ease,background 0.35s ease,border-color 0.35s ease; backdrop-filter: blur(18px); }
     .section-card:nth-of-type(1) { animation-delay:0.65s; }
     .section-card:nth-of-type(2) { animation-delay:0.8s; }
     .section-card:nth-of-type(3) { animation-delay:0.95s; }
     .section-card:nth-of-type(4) { animation-delay:1.1s; }
     .section-card:nth-of-type(5) { animation-delay:1.25s; }
-    .section-card:hover { box-shadow:var(--shadow-sm); background:var(--card-hover); }
+    .section-card:hover { box-shadow:var(--shadow-sm); background:var(--card-hover); border-color:var(--border-strong); }
 
     .section-label { font-family:'DM Serif Display',serif; font-size:1.2rem; font-weight:400; color:var(--text); margin-bottom:22px; display:flex; align-items:center; gap:9px; }
     .section-label .icon { width:19px; height:19px; color:var(--accent-warm); opacity:0.8; flex-shrink:0; }
 
-    /* News */
     .news-item { display:flex; gap:18px; align-items:baseline; padding:11px 0; border-bottom:1px solid var(--border); font-size:0.9rem; }
     .news-item:last-child { border-bottom:none; padding-bottom:0; }
     .news-item:first-of-type { padding-top:0; }
     .news-date { font-size:0.78rem; font-weight:500; color:var(--accent-warm); white-space:nowrap; min-width:64px; letter-spacing:0.02em; }
     .news-text { color:var(--text-mid); line-height:1.6; }
 
-    /* Tags */
     .tag-row { display:flex; flex-wrap:wrap; gap:8px; }
     .tag { padding:6px 16px; border-radius:100px; background:var(--accent-pale); color:var(--accent); font-size:0.83rem; font-weight:500; border:1px solid var(--accent-border); transition:all 0.3s cubic-bezier(0.16,1,0.3,1); cursor:default; }
     .tag:hover { background:var(--accent); color:var(--bg); border-color:var(--accent); transform:translateY(-1px); box-shadow:var(--shadow-sm); }
 
-    /* Publications */
     .pub-item { padding:18px 0; border-bottom:1px solid var(--border); }
     .pub-item:first-of-type { padding-top:0; }
     .pub-item:last-child { border-bottom:none; padding-bottom:0; }
@@ -135,7 +153,6 @@
     .pub-coming { display:inline-flex; align-items:center; gap:6px; font-size:0.83rem; color:var(--text-soft); font-style:italic; padding:4px 0; }
     .pub-coming svg { width:13px; height:13px; opacity:0.45; }
 
-    /* Timeline */
     .timeline-entry { display:flex; gap:24px; align-items:center; padding:18px 0; border-bottom:1px solid var(--border); }
     .timeline-entry:first-of-type { padding-top:0; }
     .timeline-entry:last-child { border-bottom:none; padding-bottom:0; }
@@ -146,17 +163,14 @@
     .timeline-info .role { font-size:0.85rem; font-weight:500; color:var(--accent-warm); margin-bottom:2px; }
     .timeline-info .meta { font-size:0.82rem; color:var(--text-soft); line-height:1.55; }
 
-    /* Time badge */
     .time-badge { display:inline-flex; align-items:center; gap:5px; padding:4px 11px; border-radius:100px; background:var(--accent-pale); border:1px solid var(--accent-border); color:var(--accent); font-size:0.73rem; font-weight:500; letter-spacing:0.02em; white-space:nowrap; flex-shrink:0; font-variant-numeric:tabular-nums; }
     .time-badge svg { width:11px; height:11px; opacity:0.65; }
 
-    /* Back to top */
-    .back-top { position:fixed; bottom:32px; right:32px; z-index:100; width:42px; height:42px; border-radius:50%; background:var(--card); border:1px solid var(--border-strong); color:var(--text-mid); box-shadow:var(--shadow-sm); display:flex; align-items:center; justify-content:center; cursor:pointer; text-decoration:none; opacity:0; pointer-events:none; transform:translateY(10px); transition:opacity 0.35s ease,transform 0.35s ease,background 0.25s,color 0.25s,box-shadow 0.25s; }
+    .back-top { position:fixed; bottom:32px; right:32px; z-index:100; width:42px; height:42px; border-radius:50%; background:var(--card); border:1px solid var(--border-strong); color:var(--text-mid); box-shadow:var(--shadow-sm); display:flex; align-items:center; justify-content:center; cursor:pointer; text-decoration:none; opacity:0; pointer-events:none; transform:translateY(10px); transition:opacity 0.35s ease,transform 0.35s ease,background 0.25s,color 0.25s,box-shadow 0.25s,border-color 0.25s; backdrop-filter: blur(14px); }
     .back-top.visible { opacity:1; pointer-events:auto; transform:translateY(0); }
     .back-top:hover { background:var(--accent); color:var(--bg); border-color:var(--accent); box-shadow:var(--shadow-md); transform:translateY(-3px); }
     .back-top svg { width:18px; height:18px; }
 
-    /* Footer */
     .footer { text-align:center; padding-top:48px; font-size:0.76rem; color:var(--text-soft); letter-spacing:0.03em; opacity:0.7; }
 
     @media (max-width:600px) {
@@ -187,7 +201,6 @@
 
   <div class="page" id="top">
 
-    <!-- Hero -->
     <div class="hero">
       <div class="avatar-wrap">
         <div class="avatar-ring"></div>
@@ -199,14 +212,12 @@
       </div>
     </div>
 
-    <!-- Bio -->
     <div class="bio">
       <p>I'm currently a Research Assistant at <a href="https://csce.suat-sz.edu.cn/" target="_blank" rel="noopener">CSCE, Shenzhen University of Advanced Technology</a>, advised by <a href="https://csce.suat-sz.edu.cn/info/1009/1263.htm" target="_blank" rel="noopener">Prof. Song Wang</a>.</p>
       <p>Prior to that, I received my Master's degree in Information Technology from the <a href="https://www.unsw.edu.au/" target="_blank" rel="noopener">University of New South Wales</a> in June 2025, where I conducted research under <a href="http://www.zhengyi.one/" target="_blank" rel="noopener">Dr. Zhengyi Yang</a> and <a href="https://www.unsw.edu.au/staff/junbum-kwon" target="_blank" rel="noopener">Dr. Junbum Kwon</a>.</p>
       <p>Earlier, I interned at the <a href="https://english.siat.ac.cn/re/ru/scc/rc/idmv/in/" target="_blank" rel="noopener">Research Center for Machine Vision</a> at <a href="https://english.siat.ac.cn/" target="_blank" rel="noopener">SIAT, Chinese Academy of Sciences</a>, advised by <a href="https://people.ucas.ac.cn/~zsong?language=en" target="_blank" rel="noopener">Prof. Zhan Song</a>.</p>
     </div>
 
-    <!-- Social -->
     <div class="social-row">
       <a class="social-btn" href="./images/resume.pdf" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
@@ -234,7 +245,6 @@
       </a>
     </div>
 
-    <!-- News -->
     <div class="section-card">
       <div class="section-label">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
@@ -246,11 +256,10 @@
       </div>
       <div class="news-item">
         <span class="news-date">2025.06</span>
-        <span class="news-text">Obtained my Master's Degree in Information Technology from UNSW 🎉</span>
+        <span class="news-text">Obtained my Master's Degree in Information Technology from UNSW</span>
       </div>
     </div>
 
-    <!-- Research Interests -->
     <div class="section-card">
       <div class="section-label">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
@@ -264,19 +273,17 @@
       </div>
     </div>
 
-    <!-- Publications -->
     <div class="section-card">
       <div class="section-label">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
         Publications
       </div>
       <p class="pub-coming">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-          Papers coming soon…
-        </p>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        Papers coming soon...
+      </p>
     </div>
 
-    <!-- Education -->
     <div class="section-card">
       <div class="section-label">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 1.657 2.686 3 6 3s6-1.343 6-3v-5"/></svg>
@@ -291,7 +298,7 @@
         </div>
         <span class="time-badge">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          Sep 2023 — Jun 2025
+          Sep 2023 - Jun 2025
         </span>
       </div>
       <div class="timeline-entry">
@@ -303,12 +310,11 @@
         </div>
         <span class="time-badge">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          Sep 2019 — Jun 2023
+          Sep 2019 - Jun 2023
         </span>
       </div>
     </div>
 
-    <!-- Experience -->
     <div class="section-card">
       <div class="section-label">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
@@ -323,7 +329,7 @@
         </div>
         <span class="time-badge">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          Aug 2025 — Now
+          Aug 2025 - Now
         </span>
       </div>
       <div class="timeline-entry">
@@ -335,7 +341,7 @@
         </div>
         <span class="time-badge">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
-          Jul 2022 — Apr 2023
+          Jul 2022 - Apr 2023
         </span>
       </div>
     </div>
