@@ -28,41 +28,6 @@
       --r: 18px;
       --r-sm: 10px;
     }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        color-scheme: dark;
-        --bg:            #0f1316;
-        --card:          rgba(24, 29, 33, 0.84);
-        --card-hover:    rgba(31, 37, 42, 0.92);
-        --text:          #f3ede3;
-        --text-mid:      #d0c6b8;
-        --text-soft:     #9f9689;
-        --accent:        #d6b07c;
-        --accent-warm:   #e7c693;
-        --accent-pale:   rgba(214, 176, 124, 0.11);
-        --accent-border: rgba(214, 176, 124, 0.22);
-        --border:        rgba(255, 248, 235, 0.08);
-        --border-strong: rgba(255, 248, 235, 0.14);
-        --shadow-xs: 0 1px 2px rgba(0,0,0,0.28);
-        --shadow-sm: 0 10px 28px rgba(0,0,0,0.26);
-        --shadow-md: 0 24px 64px rgba(0,0,0,0.36);
-        --blob-1: rgba(84, 112, 122, 0.42);
-        --blob-2: rgba(179, 136, 84, 0.26);
-        --blob-3: rgba(92, 121, 103, 0.24);
-      }
-
-      body {
-        background:
-          radial-gradient(circle at top left, rgba(103, 131, 138, 0.14), transparent 34%),
-          radial-gradient(circle at 86% 18%, rgba(201, 157, 100, 0.08), transparent 28%),
-          linear-gradient(180deg, #11161a 0%, #0f1316 100%);
-      }
-
-      body::before {
-        opacity: 0.02;
-      }
-    }
-
     *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
     html { scroll-behavior: smooth; }
     body {
